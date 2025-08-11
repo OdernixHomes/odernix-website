@@ -151,7 +151,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -167,28 +167,52 @@ const Services = () => {
       </section>
 
       {/* Services Tabs */}
-      <section className="py-20">
+      <section className="py-20 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center mb-12 border-b border-gray-200">
+          {/* Mobile Dropdown */}
+          <div className="sm:hidden mb-8">
+            <label htmlFor="service-select" className="block text-sm font-medium text-gray-700 mb-2">
+              Select Service:
+            </label>
+            <select
+              id="service-select"
+              value={activeTab}
+              onChange={(e) => setActiveTab(Number(e.target.value))}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            >
+              {services.map((service, index) => (
+                <option key={index} value={index}>
+                  {service.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Desktop Tab Navigation */}
+          <div className="hidden sm:flex flex-wrap justify-center mb-12 border-b border-gray-200">
             {services.map((service, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center space-x-2 px-6 py-4 font-medium transition-colors duration-200 border-b-2 ${
+                className={`flex items-center space-x-2 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 font-medium transition-colors duration-200 border-b-2 text-xs sm:text-sm lg:text-base ${
                   activeTab === index
                     ? 'border-purple-600 text-purple-600'
                     : 'border-transparent text-gray-600 hover:text-purple-600'
                 }`}
               >
                 {service.icon}
-                <span className="hidden sm:inline">{service.title}</span>
+                <span className="truncate max-w-[120px] sm:max-w-none">{service.title}</span>
               </button>
             ))}
           </div>
 
           {/* Tab Content */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="flex items-center space-x-3 mb-6">
@@ -232,10 +256,15 @@ const Services = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gray-50/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -276,11 +305,16 @@ const Services = () => {
             </Link>
           </div>
         </div>
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section 
+        className="py-20 relative bg-cover bg-center bg-fixed text-white"
+        style={{ backgroundImage: 'url("/odernix-bastion.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-teal-600/80"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need a Service or a New Home?
           </h2>

@@ -1,36 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { MapPin, Mail, Phone, ExternalLink, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
-  const certifications = [
-    { name: 'ISO 9001:2015', url: 'https://via.placeholder.com/50?text=ISO' },
-    { name: 'BR Safety Council', url: 'https://via.placeholder.com/50?text=BR' },
-    { name: 'LEEA', url: 'https://via.placeholder.com/50?text=LEEA' },
-    { name: 'BSI', url: 'https://via.placeholder.com/50?text=BSI' },
-    { name: 'IDDC', url: 'https://via.placeholder.com/50?text=IDDC' },
-    { name: 'NCDMB', url: 'https://via.placeholder.com/50?text=NCDMB' },
-  ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer 
+      className="bg-gray-900 text-white relative"
+      style={{
+        backgroundImage: 'url(/footer.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-gray-900/80"></div>
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="lg:col-span-1">
             <img 
-              src="https://via.placeholder.com/150x50?text=Odernix+Logo&color=ffffff&bg=6B2A77" 
+              src="/logo.png" 
               alt="Odernix Nigeria Limited Logo" 
-              className="h-12 w-auto mb-4"
+              className="h-12 w-auto mb-4 object-contain"
             />
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Odernix Nigeria Limited delivers innovative engineering and supply solutions since 2016, 
-              with Odernix Homes leading in real estate development across Nigeria and internationally.
+              Delivering innovative engineering and supply solutions since 2016, 
+              with Odernix Homes leading in real estate development.
             </p>
-            <div className="flex items-center space-x-2 text-sm text-gray-400">
+            <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
               <span>RC: 1382295</span>
               <span>•</span>
-              <span>Incorporated: Dec 28, 2016</span>
+              <span>Est. 2016</span>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="flex items-center space-x-3">
+              <a 
+                href="https://www.facebook.com/odernixnigeria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.twitter.com/odernixnigeria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 hover:bg-sky-500 text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                aria-label="Follow us on Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/odernix-nigeria-limited" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 hover:bg-blue-700 text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                aria-label="Connect with us on LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.instagram.com/odernixnigeria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 hover:bg-pink-600 text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@odernixnigeria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 hover:bg-red-600 text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                aria-label="Subscribe to our YouTube channel"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -91,34 +143,30 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Odernix Homes & Certifications */}
+          {/* Odernix Homes & Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Odernix Homes</h3>
-            <p className="text-gray-300 text-sm mb-3">
-              Luxury residential construction and development
+            <p className="text-gray-300 text-sm mb-4">
+              Luxury residential construction and development across Nigeria and internationally.
             </p>
             <a 
               href="https://www.odernixhomes.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-teal-400 hover:text-teal-300 transition-colors text-sm"
+              className="inline-flex items-center space-x-2 text-teal-400 hover:text-teal-300 transition-colors text-sm mb-4"
             >
               <span>Visit Odernix Homes</span>
               <ExternalLink className="w-4 h-4" />
             </a>
             
-            <h4 className="text-md font-semibold mt-6 mb-3 text-white">Certifications</h4>
-            <div className="grid grid-cols-3 gap-2">
-              {certifications.map((cert) => (
-                <img 
-                  key={cert.name}
-                  src={cert.url} 
-                  alt={cert.name}
-                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
-                  title={cert.name}
-                />
-              ))}
-            </div>
+            <h4 className="text-md font-semibold mb-2 text-white">Core Services</h4>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>• Engineering & Construction</li>
+              <li>• Energy Solutions</li>
+              <li>• Oil & Gas Services</li>
+              <li>• Supply & Procurement</li>
+              <li>• Real Estate Development</li>
+            </ul>
           </div>
         </div>
 
@@ -146,6 +194,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

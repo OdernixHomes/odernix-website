@@ -103,7 +103,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -137,18 +137,38 @@ const Projects = () => {
       {/* Project Filter */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* Mobile Dropdown Filter */}
+          <div className="sm:hidden mb-4">
+            <label htmlFor="category-select" className="block text-sm font-medium text-gray-700 mb-2">
+              Filter by Category:
+            </label>
+            <select
+              id="category-select"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Desktop Button Filter */}
+          <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
+                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors duration-200 text-xs sm:text-sm lg:text-base ${
                   selectedCategory === category
                     ? 'bg-purple-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-purple-100 hover:text-purple-600'
                 }`}
               >
-                {category}
+                <span className="whitespace-nowrap">{category}</span>
               </button>
             ))}
           </div>
@@ -156,7 +176,11 @@ const Projects = () => {
       </section>
 
       {/* Project Gallery */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gray-50/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
@@ -196,10 +220,15 @@ const Projects = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Project Highlights */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -235,6 +264,7 @@ const Projects = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
+        </div>
         </div>
       </section>
 

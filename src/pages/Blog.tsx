@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
+import { Calendar, User, ArrowRight, Search } from 'lucide-react';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -91,10 +90,9 @@ const Blog = () => {
   });
 
   const featuredPost = blogPosts[0];
-  const recentPosts = blogPosts.slice(1, 4);
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -109,7 +107,12 @@ const Blog = () => {
       </section>
 
       {/* Featured Post */}
-      <section className="py-20">
+      <section 
+        className="py-20 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -161,6 +164,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Search and Filter */}
@@ -180,18 +184,18 @@ const Blog = () => {
             </div>
             
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${
+                  className={`px-3 sm:px-4 py-2 rounded-full font-medium transition-colors duration-200 text-xs sm:text-sm ${
                     selectedCategory === category
                       ? 'bg-purple-600 text-white'
                       : 'bg-white text-gray-600 hover:bg-purple-100 hover:text-purple-600'
                   }`}
                 >
-                  {category}
+                  <span className="whitespace-nowrap">{category}</span>
                 </button>
               ))}
             </div>
@@ -200,7 +204,12 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20">
+      <section 
+        className="py-20 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/70"></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -275,6 +284,7 @@ const Blog = () => {
               </button>
             </div>
           )}
+        </div>
         </div>
       </section>
 

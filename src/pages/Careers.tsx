@@ -139,7 +139,7 @@ const Careers = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

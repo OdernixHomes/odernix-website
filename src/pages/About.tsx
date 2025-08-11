@@ -1,284 +1,524 @@
 import React from 'react';
-import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Globe, Award, Calendar } from 'lucide-react';
+import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Award, Building2, Zap, Globe, CheckCircle } from 'lucide-react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const About = () => {
+  // Animation observers
+  const companyOverviewSection = useIntersectionObserver();
+  const valuesSection = useIntersectionObserver();
+  const expertiseSection = useIntersectionObserver();
+  // const teamSection = useIntersectionObserver(); // Reserved for future use
+  
   const values = [
-    { icon: <Heart className="w-8 h-8" />, title: "Integrity", description: "Honest and transparent in all our dealings" },
-    { icon: <Shield className="w-8 h-8" />, title: "Safety", description: "Uncompromising commitment to safety standards" },
-    { icon: <Lightbulb className="w-8 h-8" />, title: "Innovation", description: "Embracing cutting-edge technology and solutions" },
-    { icon: <Users className="w-8 h-8" />, title: "Community Impact", description: "Creating positive change in communities we serve" },
-    { icon: <Award className="w-8 h-8" />, title: "Excellence", description: "Delivering superior quality in every project" }
+    { 
+      icon: <Heart className="w-10 h-10" />, 
+      title: "Integrity", 
+      description: "We uphold the highest ethical standards, ensuring transparency, honesty, and accountability in every business interaction and project delivery.",
+      color: "from-red-500 to-pink-500"
+    },
+    { 
+      icon: <Shield className="w-10 h-10" />, 
+      title: "Safety Excellence", 
+      description: "Safety is our top priority. We implement rigorous safety protocols and maintain zero-harm workplace standards across all our operations.",
+      color: "from-green-500 to-emerald-500"
+    },
+    { 
+      icon: <Lightbulb className="w-10 h-10" />, 
+      title: "Innovation", 
+      description: "We embrace cutting-edge technology, creative problem-solving, and innovative methodologies to deliver exceptional solutions for complex challenges.",
+      color: "from-yellow-500 to-orange-500"
+    },
+    { 
+      icon: <Users className="w-10 h-10" />, 
+      title: "Community Impact", 
+      description: "We are committed to creating positive, lasting change in the communities we serve while fostering meaningful partnerships and relationships.",
+      color: "from-blue-500 to-indigo-500"
+    },
+    { 
+      icon: <Award className="w-10 h-10" />, 
+      title: "Excellence", 
+      description: "We strive for excellence in every project, consistently delivering superior quality that exceeds client expectations and industry standards.",
+      color: "from-purple-500 to-violet-500"
+    },
+    { 
+      icon: <Globe className="w-10 h-10" />, 
+      title: "Global Vision", 
+      description: "With offices across Nigeria, UK, and Canada, we combine local expertise with international best practices to serve our diverse clientele.",
+      color: "from-teal-500 to-cyan-500"
+    }
   ];
 
   const certifications = [
-    { name: 'ISO 9001:2015', description: 'Quality Management System' },
-    { name: 'BR Safety Council', description: 'Safety Excellence Recognition' },
-    { name: 'LEEA', description: 'Lifting Equipment Engineers Association' },
-    { name: 'BSI', description: 'British Standards Institution' },
-    { name: 'IDDC', description: 'International Dredging & Development Corporation' },
-    { name: 'NCDMB', description: 'Nigerian Content Development & Monitoring Board' }
+    { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png', description: 'ISO Quality Management System Certification for Superior Service Delivery' },
+    { name: 'BSI Group', src: '/certifications /BSI.png', description: 'British Standards Institution Global Accreditation and Quality Assurance' },
+    { name: 'LEEA', src: '/certifications /LEEA.png', description: 'Lifting Equipment Engineers Association - Marine & Offshore Excellence' },
+    { name: 'NCDMB', src: '/certifications /NCDMB.png', description: 'Nigerian Content Development & Monitoring Board Partnership' },
+    { name: 'ASNT', src: '/certifications /ASNT.png', description: 'American Society for Nondestructive Testing - Advanced Inspection Techniques' },
+    { name: 'IWCF', src: '/certifications /IWCF.png', description: 'International Well Control Forum - Oil & Gas Safety Certification' },
+    { name: 'PECB', src: '/certifications /PECB.png', description: 'Professional Evaluation and Certification Board - Technical Excellence' },
+    { name: 'NipeX', src: '/certifications /NipeX.png', description: 'Nigerian Petroleum Exchange - Strategic Industry Partnership' },
+    { name: 'OGTAN', src: '/certifications /OGTAN.png', description: 'Oil and Gas Trainers Association of Nigeria - Professional Development' },
+    { name: 'NNPC', src: '/certifications /NNPC.png', description: 'Nigerian National Petroleum Corporation - Trusted Strategic Partner' },
+    { name: 'DUNS', src: '/certifications /DUNS.png', description: 'Dun & Bradstreet Number - Global Business Identity Verification' },
+    { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png', description: 'Nord-Lock Group Partnership - Advanced Fastening Solutions' },
+    { name: 'ISO', src: '/certifications /ISO.jpg', description: 'International Organization for Standardization - Quality Management Certification' }
   ];
 
   const locations = [
     {
       name: "Corporate Headquarters",
+      city: "Abuja",
+      country: "Nigeria",
       address: "A4, 29B N'Djamena Crescent, off Aminu Kano Crescent, Wuse II, Abuja, Nigeria",
       phone: "+234 703 490 0069",
       email: "info@odernix.com",
-      hours: "Mon-Fri: 8:00 AM - 6:00 PM"
+      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      description: "Our flagship headquarters housing executive leadership, engineering teams, and project management divisions."
     },
     {
-      name: "Port Harcourt Office",
+      name: "Port Harcourt Operations",
+      city: "Port Harcourt",
+      country: "Nigeria", 
       address: "Port Harcourt, Rivers State, Nigeria",
       phone: "+234 703 490 0069",
       email: "portharcourt@odernix.com",
-      hours: "Mon-Fri: 8:00 AM - 6:00 PM"
+      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination."
     },
     {
-      name: "Enugu Office (Odernix Homes)",
+      name: "Odernix Homes Enugu",
+      city: "Enugu",
+      country: "Nigeria",
       address: "Enugu, Enugu State, Nigeria",
       phone: "+234 703 490 0069",
       email: "homes@odernixhomes.com",
-      hours: "Mon-Sat: 9:00 AM - 5:00 PM"
+      hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
+      description: "Dedicated real estate and residential construction hub serving the Southeast region."
     },
     {
-      name: "United Kingdom",
+      name: "European Operations",
+      city: "London",
+      country: "United Kingdom",
       address: "London, United Kingdom",
       phone: "+44 (0) 20 XXXX XXXX",
       email: "uk@odernix.com",
-      hours: "Mon-Fri: 9:00 AM - 5:00 PM GMT"
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM GMT",
+      description: "International business development, technology partnerships, and European market operations."
     },
     {
-      name: "Canada",
+      name: "North American Office",
+      city: "Toronto",
+      country: "Canada",
       address: "Toronto, Ontario, Canada",
       phone: "+1 (416) XXX-XXXX",
       email: "canada@odernix.com",
-      hours: "Mon-Fri: 9:00 AM - 5:00 PM EST"
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM EST",
+      description: "North American operations focusing on energy solutions, technology transfer, and strategic partnerships."
     }
   ];
 
-  const milestones = [
-    { year: "2016", event: "Company Incorporation", description: "Odernix Nigeria Limited officially incorporated on December 28, 2016" },
-    { year: "2019", event: "Marine Division Launch", description: "Expanded into marine dredging and offshore services" },
-    { year: "2021", event: "Energy Sector Entry", description: "First Independent Power Project (IPP) commissioned" },
-    { year: "2023", event: "Odernix Homes Established", description: "Launched residential construction and real estate division" },
-    { year: "2025", event: "100th Home Milestone", description: "Odernix Homes completes 100th luxury residential unit" }
+
+  const businessAreas = [
+    {
+      icon: <Building2 className="w-12 h-12" />,
+      title: "Engineering & Construction",
+      subtitle: "Infrastructure Excellence",
+      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
+      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "Infrastructure Development", "Offshore Platforms"],
+      stats: "70+ Projects Completed"
+    },
+    {
+      icon: <Zap className="w-12 h-12" />,
+      title: "Energy Solutions",
+      subtitle: "Powering the Future",
+      description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions.",
+      services: ["Independent Power Projects", "Renewable Energy", "Smart Grid Systems", "Energy Storage", "Power Distribution"],
+      stats: "150MW+ Generated"
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: "Oil & Gas Services",
+      subtitle: "Upstream & Downstream Excellence",
+      description: "Comprehensive drilling, exploration, pipeline construction, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",
+      services: ["Drilling & Exploration", "Pipeline Construction", "Offshore Support", "FPSO Operations", "Environmental Services"],
+      stats: "50+ Wells Drilled"
+    },
+    {
+      icon: <Users className="w-12 h-12" />,
+      title: "Supply & Procurement",
+      subtitle: "Integrated Logistics Solutions",
+      description: "Medical supplies, office equipment, oilfield materials, and comprehensive logistics solutions. Serving healthcare, corporate, and industrial sectors with reliable supply chains.",
+      services: ["Medical Supplies", "Office Equipment", "Oilfield Materials", "Logistics Solutions", "Supply Chain Management"],
+      stats: "500+ Clients Served"
+    }
+  ];
+
+
+  const expertise = [
+    {
+      title: "Marine & Offshore Engineering",
+      description: "Specialized in complex marine construction, dredging operations, and offshore platform development with state-of-the-art equipment and experienced crews.",
+      features: ["Dredging & Reclamation", "Offshore Platforms", "Marine Terminals", "Coastal Protection"]
+    },
+    {
+      title: "Foundation Engineering",
+      description: "Expert foundation design and construction for buildings, bridges, and infrastructure with advanced geotechnical analysis and innovative construction techniques.",
+      features: ["Deep Foundation Systems", "Pile Driving Operations", "Geotechnical Analysis", "Structural Support"]
+    },
+    {
+      title: "Power Generation & Distribution",
+      description: "Comprehensive energy solutions including power plant construction, grid development, and renewable energy integration with cutting-edge technology.",
+      features: ["Independent Power Projects", "Grid Integration", "Renewable Energy", "Smart Systems"]
+    },
+    {
+      title: "Real Estate Development",
+      description: "Through Odernix Homes, we deliver luxury residential projects with modern amenities, sustainable design, and smart home integration.",
+      features: ["Luxury Residences", "Smart Home Tech", "Sustainable Design", "Community Planning"]
+    }
   ];
 
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-gray-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                About Odernix Nigeria Limited
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                Odernix Nigeria Limited, incorporated on December 28, 2016 (RC: 1382295), is a multi-disciplinary 
-                firm based in Abuja at A4, 29B N'Djamena Crescent, Wuse II. Through Odernix Homes, we extend into 
-                real estate, with branches in Port Harcourt, Enugu, the UK, and Canada.
-              </p>
-              <div className="flex items-center space-x-4 text-sm">
-                <span className="bg-white/20 px-3 py-1 rounded-full">RC: 1382295</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">Est. December 28, 2016</span>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Odernix Nigeria Limited headquarters and operations"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-purple-600">
-              <div className="flex items-center space-x-3 mb-6">
-                <Target className="w-8 h-8 text-purple-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
-              </div>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To deliver innovative, safe, and sustainable solutions across engineering, energy, 
-                and residential living, while maintaining the highest standards of quality and 
-                client satisfaction in every project we undertake.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-teal-600">
-              <div className="flex items-center space-x-3 mb-6">
-                <Eye className="w-8 h-8 text-teal-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
-              </div>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To be the leading integrated provider of infrastructure and homes by 2030, 
-                recognized for our innovation, sustainability, and positive impact on communities 
-                across Nigeria and internationally.
-              </p>
+    <div className="pt-16 sm:pt-20 md:pt-24 overflow-hidden">
+      {/* Hero Section with Animated Background */}
+      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/about-background.jpg")' }}
+      >
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: 'url("/background.jpg")',
+            animation: 'zoomBackground 30s ease-in-out infinite alternate',
+            opacity: 0.3
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/85 via-gray-900/75 to-teal-900/85"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-6 sm:space-y-8 animate-fadeInUp">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
+              About
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-teal-400 bg-clip-text text-transparent">
+                Odernix
+              </span>
+              Nigeria Limited
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+              Engineering Excellence Since 2016 • Building the Future Across Nigeria and Beyond
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
+              <span className="bg-white/10 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+                RC: 1382295
+              </span>
+              <span className="bg-white/10 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+                Founded: December 28, 2016
+              </span>
+              <span className="bg-white/10 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+                Headquarters: Abuja, Nigeria
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      {/* Company Overview with Background */}
+      <section 
+        ref={companyOverviewSection.elementRef}
+        className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/85"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-12 sm:mb-16 lg:mb-20 transform transition-all duration-1000 ${
+            companyOverviewSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8">
+              Who We Are
+            </h2>
+            <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-8 sm:mb-10"></div>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-6xl mx-auto leading-relaxed font-light">
+              Odernix Nigeria Limited is a leading multi-disciplinary engineering and construction company, 
+              providing innovative solutions across infrastructure, energy, oil & gas, and residential development. 
+              Through our subsidiary Odernix Homes, we deliver exceptional real estate projects that combine 
+              modern design with sustainable practices, setting new standards in the industry.
+            </p>
+          </div>
+
+          {/* Enhanced Business Areas Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+            {businessAreas.map((area, index) => (
+              <div 
+                key={index} 
+                className={`group relative bg-white/90 backdrop-blur-sm p-10 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-2 border border-gray-100 ${
+                  companyOverviewSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-purple-500 to-teal-500 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+                
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="text-purple-600 bg-purple-100 p-4 rounded-2xl group-hover:bg-purple-200 transition-colors duration-300">
+                    {area.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors duration-300">
+                      {area.title}
+                    </h3>
+                    <p className="text-lg text-purple-600 font-medium mb-4">{area.subtitle}</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 leading-relaxed mb-6 text-lg">{area.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Key Services:</h4>
+                  <ul className="grid grid-cols-1 gap-2">
+                    {area.services.map((service, idx) => (
+                      <li key={idx} className="flex items-center space-x-2 text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <span className="text-sm text-gray-500 font-medium">Achievement</span>
+                  <span className="text-lg font-bold text-purple-600">{area.stats}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Enhanced */}
+      <section className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-gray-900/60 to-teal-900/70"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">Our Purpose</h2>
+            <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-400 via-pink-400 to-teal-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+            <div className="group transform hover:scale-105 transition-all duration-700">
+              <div className="bg-white/95 backdrop-blur-sm p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl shadow-2xl border border-white/20">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6 sm:mb-8 text-center sm:text-left">
+                  <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-3 sm:p-4 lg:p-5 rounded-xl sm:rounded-2xl">
+                    <Target className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Our Mission</h3>
+                </div>
+                <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed font-light text-center sm:text-left">
+                  To deliver world-class engineering, construction, and real estate solutions that drive 
+                  economic growth, enhance communities, and create lasting value for our clients across 
+                  Nigeria and international markets. We are committed to excellence, innovation, and 
+                  sustainable development in every project we undertake.
+                </p>
+              </div>
+            </div>
+            
+            <div className="group transform hover:scale-105 transition-all duration-700">
+              <div className="bg-white/95 backdrop-blur-sm p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl shadow-2xl border border-white/20">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6 sm:mb-8 text-center sm:text-left">
+                  <div className="bg-gradient-to-br from-teal-500 to-teal-700 p-3 sm:p-4 lg:p-5 rounded-xl sm:rounded-2xl">
+                    <Eye className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Our Vision</h3>
+                </div>
+                <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed font-light text-center sm:text-left">
+                  To be West Africa's most trusted and innovative engineering conglomerate by 2030, 
+                  recognized for our technical excellence, sustainable practices, and transformational 
+                  impact on infrastructure and housing development. We envision a future where our 
+                  projects contribute to sustainable development and improved quality of life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Core Values */}
+      <section 
+        ref={valuesSection.elementRef}
+        className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-12 sm:mb-16 lg:mb-20 transform transition-all duration-1000 ${
+            valuesSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8">
               Our Core Values
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our operations and define our commitment to excellence
+            <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-8 sm:mb-10"></div>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+              The fundamental principles that guide our operations, define our company culture, 
+              and drive our commitment to excellence in every endeavor.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {values.map((value, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-6 text-purple-600">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our leadership team, including experts in engineering and real estate, guides Odernix and Odernix Homes. 
-              The Board brings strategic vision, supported by technical staff in construction and design.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((_, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
-                  src={`https://images.pexels.com/photos/${2379004 + index}/pexels-photo-${2379004 + index}.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop`}
-                  alt="Leadership team member"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Leadership Member</h3>
-                  <p className="text-purple-600 font-medium mb-2">Executive Position</p>
-                  <p className="text-gray-600 text-sm">Bringing years of expertise in engineering and strategic leadership.</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Certifications & Accreditations
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our commitment to quality and safety is validated by industry-leading certifications
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img
-                  src={`https://via.placeholder.com/100?text=${cert.name.replace(/\s+/g, '+')}`}
-                  alt={cert.name}
-                  className="h-16 w-auto mx-auto mb-4"
-                />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{cert.name}</h3>
-                <p className="text-gray-600 text-sm">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Locations */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Global Presence
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Strategically located offices to serve our clients across multiple continents
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {locations.map((location, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-600">
-                <div className="flex items-center space-x-2 mb-4">
-                  <MapPin className="w-5 h-5 text-purple-600" />
-                  <h3 className="text-lg font-semibold text-gray-900">{location.name}</h3>
-                </div>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>{location.address}</p>
-                  <p><strong>Phone:</strong> {location.phone}</p>
-                  <p><strong>Email:</strong> {location.email}</p>
-                  <p><strong>Hours:</strong> {location.hours}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <img
-              src="https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
-              alt="Global map showing Odernix locations"
-              className="rounded-lg shadow-lg mx-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Milestones */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Key Milestones
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our journey of growth and achievement over the years
-            </p>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-purple-200"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <Calendar className="w-5 h-5 text-purple-600" />
-                        <span className="text-2xl font-bold text-purple-600">{milestone.year}</span>
-                      </div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{milestone.event}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
+              <div 
+                key={index} 
+                className={`group relative bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-xl text-center hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-gray-100 ${
+                  valuesSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <div className={`bg-gradient-to-br ${value.color} p-6 rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
+                    <div className="text-white">
+                      {value.icon}
                     </div>
                   </div>
-                  <div className="relative z-10">
-                    <div className="w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow-lg"></div>
-                  </div>
-                  <div className="w-1/2"></div>
                 </div>
-              ))}
-            </div>
+                
+                <div className="pt-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">{value.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Enhanced Expertise Areas */}
+      <section 
+        ref={expertiseSection.elementRef}
+        className="py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-gray-900/70 to-teal-900/80"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-20 transform transition-all duration-1000 ${
+            expertiseSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              Our Expertise
+            </h2>
+            <div className="w-32 h-2 bg-gradient-to-r from-purple-400 via-pink-400 to-teal-400 mx-auto rounded-full mb-10"></div>
+            <p className="text-2xl text-gray-200 max-w-4xl mx-auto font-light">
+              Specialized knowledge and technical capabilities that set us apart in the industry.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {expertise.map((area, index) => (
+              <div 
+                key={index} 
+                className={`group bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-2 border border-white/20 ${
+                  expertiseSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 group-hover:text-purple-700 transition-colors duration-300">
+                  {area.title}
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">{area.description}</p>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  {area.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-teal-500 rounded-full"></div>
+                      <span className="text-gray-700 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Certifications */}
+      <section className="py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+              Certifications & Partnerships
+            </h2>
+            <div className="w-32 h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-10"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+              Our commitment to excellence is validated through industry-leading certifications 
+              and strategic partnerships with global organizations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            {certifications.map((cert, index) => (
+              <div key={index} className="group bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
+                <div className="flex items-center justify-center h-24 mb-6">
+                  <img
+                    src={cert.src}
+                    alt={cert.name}
+                    className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover:scale-110"
+                    title={cert.name}
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                  {cert.name}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Global Locations */}
+      <section className="py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/70 to-teal-900/80"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              Global Presence
+            </h2>
+            <div className="w-32 h-2 bg-gradient-to-r from-purple-400 via-pink-400 to-teal-400 mx-auto rounded-full mb-10"></div>
+            <p className="text-2xl text-gray-200 max-w-4xl mx-auto font-light">
+              Strategically positioned offices across multiple continents to serve our diverse 
+              clientele and expand our global reach.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {locations.map((location, index) => (
+              <div key={index} className="group bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-2xl border-l-6 border-purple-500 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="bg-gradient-to-br from-purple-500 to-teal-500 p-3 rounded-full">
+                    <MapPin className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
+                      {location.name}
+                    </h3>
+                    <p className="text-lg text-purple-600 font-medium">{location.city}, {location.country}</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">{location.description}</p>
+                
+                <div className="space-y-3 text-gray-600 text-sm">
+                  <p className="leading-relaxed"><span className="font-semibold text-gray-800">Address:</span> {location.address}</p>
+                  <p><span className="font-semibold text-gray-800">Phone:</span> {location.phone}</p>
+                  <p><span className="font-semibold text-gray-800">Email:</span> {location.email}</p>
+                  <p><span className="font-semibold text-gray-800">Hours:</span> {location.hours}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
