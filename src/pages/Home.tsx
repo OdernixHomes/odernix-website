@@ -86,7 +86,7 @@ const Home = () => {
     },
     {
       title: "Supplies – Medical and Office",
-      description: "Timely delivery of medical, office, oilfield, and agricultural materials with advanced logistics.",
+      description: "Timely delivery of medical, office, oilfield materials with NDT services and advanced logistics.",
       icon: "📦"
     },
     {

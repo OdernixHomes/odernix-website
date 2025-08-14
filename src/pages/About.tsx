@@ -123,8 +123,8 @@ const About = () => {
       icon: <Building2 className="w-12 h-12" />,
       title: "Engineering & Construction",
       subtitle: "Infrastructure Excellence",
-      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
-      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "Infrastructure Development", "Offshore Platforms"],
+      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with NDT quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
+      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "NDT Inspection Services", "Infrastructure Development", "Offshore Platforms"],
       stats: "70+ Projects Completed"
     },
     {

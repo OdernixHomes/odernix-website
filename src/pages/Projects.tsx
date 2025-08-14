@@ -74,7 +74,7 @@ const Projects = () => {
       year: "2024",
       category: "Oil & Gas",
       location: "Port Harcourt, Nigeria",
-      description: "Pipeline construction and maintenance with digital twin technology for integrity management.",
+      description: "Pipeline construction and maintenance with NDT inspection, digital twin technology for integrity management.",
       image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
       status: "Ongoing"
     },
@@ -86,10 +86,19 @@ const Projects = () => {
       description: "Second phase of luxury residential development with enhanced sustainability features.",
       image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
       status: "Planning"
+    },
+    {
+      title: "NDT Inspection Campaign - Lagos Refinery",
+      year: "2024",
+      category: "NDT Services",
+      location: "Lagos, Nigeria",
+      description: "Comprehensive NDT inspection of refinery equipment including pressure vessels, pipelines, and storage tanks using multiple testing methods.",
+      image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      status: "Completed"
     }
   ];
 
-  const categories = ['All', 'Marine Engineering', 'Energy', 'Oil & Gas', 'Real Estate', 'Environmental'];
+  const categories = ['All', 'Marine Engineering', 'Energy', 'Oil & Gas', 'Real Estate', 'Environmental', 'NDT Services'];
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 

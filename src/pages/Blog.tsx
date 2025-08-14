@@ -77,10 +77,28 @@ const Blog = () => {
       category: "Energy Innovations",
       image: "https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
       readTime: "7 min read"
+    },
+    {
+      title: "The Importance of NDT in Infrastructure Safety",
+      excerpt: "How Non-Destructive Testing ensures structural integrity and prevents catastrophic failures in critical infrastructure projects.",
+      date: "March 15, 2025",
+      author: "NDT Division",
+      category: "Quality Assurance",
+      image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      readTime: "6 min read"
+    },
+    {
+      title: "Advanced NDT Methods in Oil & Gas Operations",
+      excerpt: "Exploring cutting-edge non-destructive testing techniques for pipeline integrity, vessel inspection, and offshore platform safety.",
+      date: "February 28, 2025",
+      author: "NDT Division",
+      category: "Oil & Gas Updates",
+      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      readTime: "8 min read"
     }
   ];
 
-  const categories = ['All', 'Residential Trends', 'Energy Innovations', 'Oil & Gas Updates', 'Supply Chain Insights', 'Marine Engineering', 'Sustainability'];
+  const categories = ['All', 'Residential Trends', 'Energy Innovations', 'Oil & Gas Updates', 'Supply Chain Insights', 'Marine Engineering', 'Sustainability', 'Quality Assurance'];
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;

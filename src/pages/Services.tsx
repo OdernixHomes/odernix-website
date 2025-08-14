@@ -31,7 +31,7 @@ const Services = () => {
         "EPC services (turnkey execution of oil & gas facilities, power plants, marine terminals with EPCM/QA/QC)",
         "General contracts (facility upgrades, pipeline welding, transportation)"
       ],
-      feature: "3D project visualizations and real-time dashboards"
+      feature: "3D project visualizations, real-time dashboards, and NDT inspection reports"
     },
     {
       id: 1,
@@ -116,7 +116,9 @@ const Services = () => {
         "Fumigation",
         "Oil/gas equipment",
         "Medical/hospitality supplies",
-        "N.D.T",
+        "Non-Destructive Testing (NDT) - ultrasonic, radiographic, magnetic particle, dye penetrant, visual inspection",
+        "NDT equipment supply and calibration services",
+        "Certified NDT technicians and inspection services",
         "Office equipment",
         "Power plant maintenance",
         "Workforce training"
@@ -142,6 +144,59 @@ const Services = () => {
       feature: "Immersive VR tours and sustainability certificates"
     }
   ];
+
+  const ndtServices = {
+    title: "Non-Destructive Testing (NDT)",
+    icon: <CheckCircle className="w-8 h-8" />,
+    description: "Our certified NDT specialists provide comprehensive inspection services to ensure structural integrity, safety compliance, and quality assurance across all industries without damaging the tested materials.",
+    methods: [
+      {
+        name: "Ultrasonic Testing (UT)",
+        description: "High-frequency sound waves detect internal flaws, thickness measurement, and material characterization",
+        applications: ["Pipeline integrity", "Weld inspection", "Thickness gauging", "Flaw detection"]
+      },
+      {
+        name: "Radiographic Testing (RT)",
+        description: "X-ray and gamma-ray imaging reveals internal discontinuities and structural defects",
+        applications: ["Weld quality assessment", "Casting inspection", "Corrosion detection", "Assembly verification"]
+      },
+      {
+        name: "Magnetic Particle Testing (MT)",
+        description: "Magnetic fields and iron particles detect surface and near-surface discontinuities in ferromagnetic materials",
+        applications: ["Surface crack detection", "Weld inspection", "Component testing", "Quality control"]
+      },
+      {
+        name: "Dye Penetrant Testing (PT)",
+        description: "Liquid penetrant reveals surface-breaking defects in non-porous materials",
+        applications: ["Surface crack detection", "Porosity identification", "Component inspection", "Maintenance checks"]
+      },
+      {
+        name: "Visual Testing (VT)",
+        description: "Direct visual examination and optical aids for surface condition assessment",
+        applications: ["General inspection", "Weld assessment", "Corrosion monitoring", "Damage evaluation"]
+      },
+      {
+        name: "Eddy Current Testing (ET)",
+        description: "Electromagnetic induction detects surface and near-surface flaws in conductive materials",
+        applications: ["Tube inspection", "Surface crack detection", "Conductivity measurement", "Coating thickness"]
+      }
+    ],
+    certifications: [
+      "ASNT (American Society for Nondestructive Testing) Level II & III certified technicians",
+      "ISO 9712 international certification compliance",
+      "API 570, API 510, API 653 inspection certifications",
+      "NACE corrosion specialist certifications",
+      "AWS (American Welding Society) certified welding inspectors"
+    ],
+    industries: [
+      "Oil & Gas (pipelines, refineries, offshore platforms)",
+      "Marine & Offshore (vessels, rigs, subsea structures)",
+      "Power Generation (turbines, boilers, pressure vessels)",
+      "Construction (bridges, buildings, infrastructure)",
+      "Manufacturing (aerospace, automotive, heavy machinery)",
+      "Petrochemical (storage tanks, process equipment)"
+    ]
+  };
 
   const caseStudies = [
     { title: "Niger Delta Dredging", year: "2024", category: "Marine Engineering", description: "Large-scale coastal reclamation project" },
@@ -256,6 +311,95 @@ const Services = () => {
             </div>
           </div>
         </div>
+        </div>
+      </section>
+
+      {/* NDT Services Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-blue-50/80"></div>
+        <div className="relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="text-blue-600">
+                  {ndtServices.icon}
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  {ndtServices.title}
+                </h2>
+              </div>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                {ndtServices.description}
+              </p>
+            </div>
+
+            {/* NDT Methods Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {ndtServices.methods.map((method, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-xl font-semibold text-blue-800 mb-3">{method.name}</h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{method.description}</p>
+                  <div>
+                    <h4 className="font-medium text-gray-800 mb-2">Applications:</h4>
+                    <ul className="space-y-1">
+                      {method.applications.map((app, appIndex) => (
+                        <li key={appIndex} className="flex items-center space-x-2 text-sm text-gray-600">
+                          <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                          <span>{app}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Certifications and Industries */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our NDT Certifications</h3>
+                <div className="space-y-3">
+                  {ndtServices.certifications.map((cert, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600 text-sm">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Industries We Serve</h3>
+                <div className="space-y-3">
+                  {ndtServices.industries.map((industry, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600 text-sm">{industry}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* NDT CTA */}
+            <div className="text-center mt-16">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Need NDT Inspection Services?</h3>
+                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                  Our certified NDT technicians are ready to ensure your assets meet the highest safety and quality standards.
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <span>Request NDT Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

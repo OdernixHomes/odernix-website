@@ -93,6 +93,36 @@ const Careers = () => {
         "Strong leadership and communication skills",
         "Willingness to travel internationally"
       ]
+    },
+    {
+      title: "NDT Inspector Level II",
+      location: "Port Harcourt, Nigeria",
+      type: "Full-time",
+      department: "Quality Assurance",
+      experience: "3-5 years",
+      description: "Perform non-destructive testing using multiple methods including UT, RT, MT, and PT. Ensure compliance with international standards and safety protocols.",
+      requirements: [
+        "ASNT Level II certification in at least 2 NDT methods",
+        "3+ years experience in industrial NDT applications",
+        "Knowledge of API, ASME, and AWS codes and standards",
+        "Experience with oil & gas, marine, or power generation industries",
+        "Strong attention to detail and safety consciousness"
+      ]
+    },
+    {
+      title: "Senior NDT Technician",
+      location: "Abuja, Nigeria",
+      type: "Full-time",
+      department: "Quality Assurance",
+      experience: "5+ years",
+      description: "Lead NDT inspection teams, develop inspection procedures, and ensure quality compliance across multiple projects and industries.",
+      requirements: [
+        "ASNT Level III certification preferred",
+        "5+ years NDT experience with supervisory responsibilities",
+        "Expertise in advanced NDT methods and equipment",
+        "Strong project management and leadership skills",
+        "Experience with digital reporting and inspection software"
+      ]
     }
   ];
 

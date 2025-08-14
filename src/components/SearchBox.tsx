@@ -42,7 +42,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ isOpen, onClose }) => {
     },
     {
       title: 'Medical & Office Supplies',
-      description: 'Timely delivery of medical and office materials',
+      description: 'Medical supplies, office materials, and NDT equipment',
       url: '/services',
       category: 'Services'
     },
@@ -81,6 +81,18 @@ const SearchBox: React.FC<SearchBoxProps> = ({ isOpen, onClose }) => {
       description: 'Latest news and industry insights',
       url: '/blog',
       category: 'Resources'
+    },
+    {
+      title: 'NDT Services',
+      description: 'Non-Destructive Testing and inspection services',
+      url: '/services',
+      category: 'Services'
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'NDT inspection and structural integrity testing',
+      url: '/services',
+      category: 'Services'
     }
   ], []);
 
