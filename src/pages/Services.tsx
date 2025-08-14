@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle } from 'lucide-react';
+import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle, Search } from 'lucide-react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const heroSection = useIntersectionObserver();
 
   const services = [
     {
@@ -127,6 +129,30 @@ const Services = () => {
     },
     {
       id: 4,
+      title: "NDT (Non-Destructive Testing)",
+      icon: <Search className="w-8 h-8" />,
+      description: "Our certified NDT specialists provide comprehensive non-destructive testing services to ensure structural integrity, safety, and quality assurance across oil & gas, construction, and marine industries.",
+      subServices: [
+        "Ultrasonic Testing (UT) - Weld inspection, thickness measurement, flaw detection",
+        "Radiographic Testing (RT) - Internal defect detection in welds and castings",
+        "Magnetic Particle Testing (MT) - Surface crack detection in ferromagnetic materials",
+        "Liquid Penetrant Testing (PT) - Surface discontinuity detection",
+        "Visual Testing (VT) - Surface condition and structural assessment",
+        "Eddy Current Testing (ECT) - Conductivity and coating thickness measurement",
+        "Pipeline Integrity Assessment - In-line inspection and corrosion mapping",
+        "Pressure Vessel Testing - Code compliance and safety verification",
+        "Storage Tank Floor Scanning - Bottom plate thickness and corrosion detection",
+        "Structural Steel Inspection - Building and bridge component testing",
+        "Marine Structure Testing - Offshore platform and vessel hull inspection",
+        "Weld Quality Assessment - Pre-service and in-service weld evaluation",
+        "Corrosion Monitoring - Real-time asset condition assessment",
+        "Digital Radiography - Advanced imaging with immediate results",
+        "Phased Array Ultrasonic Testing (PAUT) - Advanced flaw sizing and characterization"
+      ],
+      feature: "ASNT Level II/III certified technicians with digital reporting and 3D flaw mapping"
+    },
+    {
+      id: 5,
       title: "Real Estate & Residential Construction",
       icon: <Home className="w-8 h-8" />,
       description: "Through Odernix Homes, we design and build luxury residential properties with modern amenities and virtual tour options. Visit https://www.odernixhomes.com to explore.",
@@ -208,16 +234,46 @@ const Services = () => {
   return (
     <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Odernix Nigeria Limited delivers a diverse portfolio of services spanning construction, energy, 
-            oil & gas, supply, and real estate, leveraging cutting-edge technology, sustainability practices, 
-            and global expertise.
-          </p>
+      <section 
+        ref={heroSection.elementRef}
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
+      >
+        {/* Animated overlay background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: 'url("/background.jpg")',
+            animation: 'zoomBackground 25s ease-in-out infinite alternate',
+            opacity: 0.2
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/85 via-blue-900/75 to-teal-900/85"></div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rotate-45 animate-bounce" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-40 left-1/4 w-3 h-3 sm:w-4 sm:h-4 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+            heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              Our
+              <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+              Odernix Nigeria Limited delivers a diverse portfolio of services spanning construction, energy, 
+              oil & gas, supply, and real estate, leveraging cutting-edge technology, sustainability practices, 
+              and global expertise.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -285,7 +341,7 @@ const Services = () => {
                   <h3 className="text-lg font-semibold text-teal-800 mb-2">Special Feature</h3>
                   <p className="text-teal-700">{services[activeTab].feature}</p>
                 </div>
-                {activeTab === 4 && (
+                {activeTab === 5 && (
                   <a
                     href="https://www.odernixhomes.com"
                     target="_blank"
@@ -295,6 +351,15 @@ const Services = () => {
                     <span>Visit Odernix Homes</span>
                     <ExternalLink className="w-5 h-5" />
                   </a>
+                )}
+                {activeTab === 4 && (
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center space-x-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
+                  >
+                    <span>Request NDT Services</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 )}
               </div>
               <div>

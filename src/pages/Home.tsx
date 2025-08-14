@@ -50,7 +50,7 @@ const Home = () => {
       subtitle: "Medical, office, and oilfield supplies at your service.",
       cta: "View Supply Options",
       ctaLink: "/services",
-      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
+      image: "../supply-chain/supply-chain-background.png"
     },
     {
       title: "Marine & Agricultural Innovation",
@@ -58,6 +58,13 @@ const Home = () => {
       cta: "Learn More",
       ctaLink: "/services",
       image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
+    },
+    {
+      title: "NDT Excellence & Quality Assurance",
+      subtitle: "Advanced non-destructive testing for structural integrity and safety across all industries.",
+      cta: "Learn More",
+      ctaLink: "/services",
+      image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
     },
     {
       title: "Your Dream Home Awaits",
@@ -88,6 +95,11 @@ const Home = () => {
       title: "Supplies – Medical and Office",
       description: "Timely delivery of medical, office, oilfield materials with NDT services and advanced logistics.",
       icon: "📦"
+    },
+    {
+      title: "NDT (Non-Destructive Testing)",
+      description: "Comprehensive testing services ensuring structural integrity and safety compliance across oil & gas, construction, and marine sectors.",
+      icon: "🔍"
     },
     {
       title: "Real Estate & Residential Construction",
@@ -334,7 +346,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Founded on December 28, 2016 (RC: 1382295), Odernix Nigeria Limited, headquartered in Abuja, 
                 leads in engineering, energy, and supply services. Through Odernix Homes, we excel in real estate, 
-                with a global network including Port Harcourt, Enugu, the UK, and Canada.
+                with a global network including  Nigeria, the UK, and Canada.
               </p>
               <Link
                 to="/about"
@@ -375,7 +387,7 @@ const Home = () => {
               Our Core Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive solutions across five key sectors, delivering excellence in every project
+              Comprehensive solutions across six key sectors, delivering excellence in every project
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">

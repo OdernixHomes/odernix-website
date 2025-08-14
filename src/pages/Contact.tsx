@@ -324,40 +324,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Why Contact Us Section */}
-      <section className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/background.jpg")' }}
-      >
-        <div className="absolute inset-0 bg-white/90"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8">
-              Why Choose Odernix?
-            </h2>
-            <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-8 sm:mb-10"></div>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-light">
-              Experience the difference of working with Nigeria's leading engineering and construction company
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {whyContactUs.map((reason, index) => (
-              <div 
-                key={index}
-                className="group bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 text-center border border-gray-100"
-              >
-                <div className="text-purple-600 bg-purple-100 p-4 sm:p-5 rounded-full inline-flex mb-6 group-hover:bg-purple-200 transition-colors duration-300">
-                  {reason.icon}
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
-                  {reason.title}
-                </h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{reason.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Enhanced Contact Form Section */}
       <section 
@@ -554,7 +521,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm sm:text-base">
                   <div>
                     <p className="font-semibold text-gray-900">Nigeria Offices:</p>
-                    <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-700">Monday - Friday: 9:00 AM - 5:00 PM</p>
                     <p className="text-gray-700">Saturday: 9:00 AM - 2:00 PM (Enugu)</p>
                   </div>
                   <div>
@@ -570,6 +537,41 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Contact Us Section */}
+      <section className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8">
+              Why Choose Odernix?
+            </h2>
+            <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-8 sm:mb-10"></div>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+              Experience the difference of working with Nigeria's leading engineering and construction company
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {whyContactUs.map((reason, index) => (
+              <div 
+                key={index}
+                className="group bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 text-center border border-gray-100"
+              >
+                <div className="text-purple-600 bg-purple-100 p-4 sm:p-5 rounded-full inline-flex mb-6 group-hover:bg-purple-200 transition-colors duration-300">
+                  {reason.icon}
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">
+                  {reason.title}
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{reason.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

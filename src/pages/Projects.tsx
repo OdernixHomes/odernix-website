@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, MapPin, Users, Award, TrendingUp } from 'lucide-react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const heroSection = useIntersectionObserver();
 
   const projects = [
     {
@@ -114,15 +116,45 @@ const Projects = () => {
   return (
     <div className="pt-16 sm:pt-20 lg:pt-24">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-gray-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Projects
-          </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Odernix Nigeria Limited's project portfolio showcases expertise in engineering, energy, 
-            oil & gas, supply, and residential construction through Odernix Homes.
-          </p>
+      <section 
+        ref={heroSection.elementRef}
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
+      >
+        {/* Animated overlay background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: 'url("/background.jpg")',
+            animation: 'zoomBackground 25s ease-in-out infinite alternate',
+            opacity: 0.2
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/85 via-blue-900/75 to-teal-900/85"></div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rotate-45 animate-bounce" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-40 left-1/4 w-3 h-3 sm:w-4 sm:h-4 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+            heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              Our
+              <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
+                Projects
+              </span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+              Odernix Nigeria Limited's project portfolio showcases expertise in engineering, energy, 
+              oil & gas, supply, and residential construction through Odernix Homes across multiple continents.
+            </p>
+          </div>
         </div>
       </section>
 

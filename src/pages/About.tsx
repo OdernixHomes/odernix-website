@@ -1,9 +1,10 @@
 import React from 'react';
-import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Award, Building2, Zap, Globe, CheckCircle } from 'lucide-react';
+import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Award, Building2, Zap, Globe, CheckCircle, Search } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const About = () => {
   // Animation observers
+  const heroSection = useIntersectionObserver();
   const companyOverviewSection = useIntersectionObserver();
   const valuesSection = useIntersectionObserver();
   const expertiseSection = useIntersectionObserver();
@@ -150,6 +151,14 @@ const About = () => {
       description: "Medical supplies, office equipment, oilfield materials, and comprehensive logistics solutions. Serving healthcare, corporate, and industrial sectors with reliable supply chains.",
       services: ["Medical Supplies", "Office Equipment", "Oilfield Materials", "Logistics Solutions", "Supply Chain Management"],
       stats: "500+ Clients Served"
+    },
+    {
+      icon: <Search className="w-12 h-12" />,
+      title: "NDT (Non-Destructive Testing)",
+      subtitle: "Quality Assurance Excellence",
+      description: "ASNT certified specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
+      services: ["Ultrasonic Testing", "Radiographic Testing", "Magnetic Particle Testing", "Pipeline Integrity Assessment", "Weld Quality Assessment"],
+      stats: "ASNT Level II/III Certified"
     }
   ];
 
@@ -174,35 +183,53 @@ const About = () => {
       title: "Real Estate Development",
       description: "Through Odernix Homes, we deliver luxury residential projects with modern amenities, sustainable design, and smart home integration.",
       features: ["Luxury Residences", "Smart Home Tech", "Sustainable Design", "Community Planning"]
+    },
+    {
+      title: "NDT & Quality Assurance",
+      description: "Comprehensive non-destructive testing services with ASNT certified technicians ensuring safety, compliance, and structural integrity across all industrial applications.",
+      features: ["Ultrasonic Testing", "Radiographic Testing", "Pipeline Integrity", "Weld Assessment"]
     }
   ];
 
   return (
     <div className="pt-16 sm:pt-20 md:pt-24 overflow-hidden">
-      {/* Hero Section with Animated Background */}
-      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/about-background.jpg")' }}
+      {/* Hero Section */}
+      <section 
+        ref={heroSection.elementRef}
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
       >
+        {/* Animated overlay background */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
             backgroundImage: 'url("/background.jpg")',
-            animation: 'zoomBackground 30s ease-in-out infinite alternate',
-            opacity: 0.3
+            animation: 'zoomBackground 25s ease-in-out infinite alternate',
+            opacity: 0.2
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/85 via-gray-900/75 to-teal-900/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/85 via-blue-900/75 to-teal-900/85"></div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-4 h-4 sm:w-6 sm:h-6 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rotate-45 animate-bounce" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-40 left-1/4 w-3 h-3 sm:w-4 sm:h-4 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
+        </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6 sm:space-y-8 animate-fadeInUp">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
+          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+            heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               About
-              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
                 Odernix
               </span>
               Nigeria Limited
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
               Engineering Excellence Since 2016 • Building the Future Across Nigeria and Beyond
             </p>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
