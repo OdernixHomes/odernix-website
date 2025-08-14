@@ -8,107 +8,91 @@ const Projects = () => {
   const heroSection = useIntersectionObserver();
 
   const projects = [
+    // Real Estate Projects - Actual Odernix Homes achievements
     {
-      title: "Niger Delta Dredging",
-      year: "2024",
-      category: "Marine Engineering",
-      location: "Niger Delta, Nigeria",
-      description: "Large-scale coastal reclamation and dredging project to restore waterways and create new land for development.",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Abuja Independent Power Project",
-      year: "2023",
-      category: "Energy",
-      location: "Abuja, Nigeria",
-      description: "50MW independent power plant with smart grid integration and renewable energy components.",
-      image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Port Harcourt FPSO Support",
-      year: "2022",
-      category: "Oil & Gas",
-      location: "Port Harcourt, Nigeria",
-      description: "Comprehensive marine support services for offshore FPSO operations including logistics and maintenance.",
-      image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Enugu Odernix Homes Development",
+      title: "Odernix Homes Development - Terrazza",
       year: "2024",
       category: "Real Estate",
-      location: "Enugu, Nigeria",
-      description: "Luxury residential development featuring 50 modern homes with smart home technology and sustainable design.",
-      image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      location: "Abuja, Nigeria",
+      description: "Luxury residential development featuring modern homes with smart home technology and sustainable design by our subsidiary Odernix Homes.",
+      image: "../../assets/images/odernix-homes-terrazza.jpg",
       status: "Ongoing"
     },
     {
-      title: "UK Smart Grid Implementation",
-      year: "2023",
-      category: "Energy",
-      location: "London, UK",
-      description: "Advanced smart grid deployment with IoT monitoring and automated energy management systems.",
-      image: "https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Canada Environmental Cleanup",
-      year: "2024",
-      category: "Environmental",
-      location: "Toronto, Canada",
-      description: "Marine environmental services including oil spill containment and coastal restoration.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Lagos Marine Terminal",
-      year: "2023",
-      category: "Marine Engineering",
-      location: "Lagos, Nigeria",
-      description: "Construction of modern marine terminal with advanced cargo handling facilities.",
-      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
-    },
-    {
-      title: "Port Harcourt Pipeline Project",
-      year: "2024",
-      category: "Oil & Gas",
-      location: "Port Harcourt, Nigeria",
-      description: "Pipeline construction and maintenance with NDT inspection, digital twin technology for integrity management.",
-      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Ongoing"
-    },
-    {
-      title: "Abuja Odernix Homes Phase II",
+      title: "Abuja Odernix Homes Phase - Bastion",
       year: "2025",
       category: "Real Estate",
       location: "Abuja, Nigeria",
-      description: "Second phase of luxury residential development with enhanced sustainability features.",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      description: "Planned expansion of luxury residential development with enhanced sustainability features and smart infrastructure.",
+      image: "./odernix-bastion.jpg",
       status: "Planning"
     },
+    // Service Capabilities - Ready to deliver
     {
-      title: "NDT Inspection Campaign - Lagos Refinery",
-      year: "2024",
+      title: "Marine Engineering Capabilities",
+      year: "Ready",
+      category: "Marine Engineering",
+      location: "Nigeria & International",
+      description: "Advanced dredging, coastal reclamation, offshore platform support, and marine terminal construction capabilities with certified teams.",
+      image: "../marine/marine.jpg",
+      status: "Available"
+    },
+    {
+      title: "Energy Solutions Portfolio",
+      year: "Ready",
+      category: "Energy",
+      location: "Nigeria & Global",
+      description: "Independent power projects, smart grid systems, renewable energy integration, and energy storage solution capabilities.",
+      image: "../energy/energy.jpg",
+      status: "Available"
+    },
+    {
+      title: "Oil & Gas Service Readiness",
+      year: "Ready",
+      category: "Oil & Gas",
+      location: "Nigeria & West Africa",
+      description: "Comprehensive drilling support, pipeline integrity, FPSO operations, and offshore logistics services with certified expertise.",
+      image: "../oil-gas/oil-and-gas-background2.jpg",
+      status: "Available"
+    },
+    {
+      title: "NDT Inspection Services",
+      year: "Ready",
       category: "NDT Services",
-      location: "Lagos, Nigeria",
-      description: "Comprehensive NDT inspection of refinery equipment including pressure vessels, pipelines, and storage tanks using multiple testing methods.",
-      image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
-      status: "Completed"
+      location: "Nigeria & International",
+      description: "ASNT certified NDT technicians ready for comprehensive inspection services across all industries with advanced equipment.",
+      image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      status: "Available"
+    },
+    {
+      title: "Global Supply Chain Network",
+      year: "Ready",
+      category: "Supply & Logistics",
+      location: "International Network",
+      description: "Comprehensive supply and procurement services with global partnerships for medical, office, and industrial materials.",
+      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      status: "Available"
+    },
+    {
+      title: "Construction & Infrastructure",
+      year: "Ready",
+      category: "Construction",
+      location: "Nigeria & Regional",
+      description: "Foundation engineering, civil works, structural construction with digital project management and quality assurance systems.",
+      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
+      status: "Available"
     }
   ];
 
-  const categories = ['All', 'Marine Engineering', 'Energy', 'Oil & Gas', 'Real Estate', 'Environmental', 'NDT Services'];
+  const categories = ['All', 'Real Estate', 'Marine Engineering', 'Energy', 'Oil & Gas', 'NDT Services', 'Supply & Logistics', 'Construction'];
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
   const stats = [
-    { icon: <Award className="w-8 h-8" />, value: "70+", label: "Projects Completed" },
-    { icon: <Users className="w-8 h-8" />, value: "98%", label: "Client Satisfaction" },
+    { icon: <Award className="w-8 h-8" />, value: "8", label: "Service Areas" },
+    { icon: <Users className="w-8 h-8" />, value: "13+", label: "Certifications" },
     { icon: <TrendingUp className="w-8 h-8" />, value: "5", label: "Countries" },
     { icon: <Calendar className="w-8 h-8" />, value: "9", label: "Years Experience" }
   ];
@@ -119,7 +103,7 @@ const Projects = () => {
       <section 
         ref={heroSection.elementRef}
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
+        style={{ backgroundImage: 'url("/project-background.jpg")' }}
       >
         {/* Animated overlay background */}
         <div 
@@ -140,19 +124,19 @@ const Projects = () => {
           <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex items-center justify-center">
+          <div className={`space-y-6 sm:space-y-8 md:space-y-10 transform transition-all duration-1000 ${
             heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
               Our
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
                 Projects
               </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
-              Odernix Nigeria Limited's project portfolio showcases expertise in engineering, energy, 
-              oil & gas, supply, and residential construction through Odernix Homes across multiple continents.
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed px-4">
+              Explore our comprehensive service capabilities and Odernix Homes' successful residential developments. 
+              Ready to deliver world-class engineering solutions across multiple industries and continents.
             </p>
           </div>
         </div>
@@ -161,14 +145,14 @@ const Projects = () => {
       {/* Project Stats */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4 text-purple-600">
+                <div className="inline-flex items-center justify-center w-20 h-20 md:w-16 md:h-16 bg-purple-100 rounded-full mb-4 text-purple-600">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-4xl md:text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-gray-600 text-base md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -223,29 +207,29 @@ const Projects = () => {
         <div className="absolute inset-0 bg-gray-50/70"></div>
         <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProjects.map((project, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 md:h-48 object-cover"
                 />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0">
+                    <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full w-fit">
                       {project.category}
                     </span>
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      project.status === 'Completed' ? 'bg-green-100 text-green-800' :
+                    <span className={`text-xs px-2 py-1 rounded-full w-fit ${
+                      project.status === 'Available' ? 'bg-green-100 text-green-800' :
                       project.status === 'Ongoing' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-blue-100 text-blue-800'
                     }`}>
                       {project.status}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{project.title}</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0 text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
                       <span>{project.year}</span>
@@ -255,7 +239,7 @@ const Projects = () => {
                       <span>{project.location}</span>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+                  <p className="text-gray-600 text-base leading-relaxed">{project.description}</p>
                 </div>
               </div>
             ))}
@@ -279,21 +263,21 @@ const Projects = () => {
               Key achievements and innovations across our project portfolio
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-purple-50 rounded-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">70+</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Projects Delivered</div>
-              <p className="text-gray-600">Successfully completed projects across multiple sectors and countries</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="text-center p-8 md:p-10 bg-purple-50 rounded-lg">
+              <div className="text-5xl md:text-4xl font-bold text-purple-600 mb-4">70+</div>
+              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Projects Delivered</div>
+              <p className="text-gray-600 text-base">Successfully completed projects across multiple sectors and countries</p>
             </div>
-            <div className="text-center p-8 bg-teal-50 rounded-lg">
-              <div className="text-4xl font-bold text-teal-600 mb-2">98%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Client Satisfaction</div>
-              <p className="text-gray-600">Consistently high client satisfaction rates across all project types</p>
+            <div className="text-center p-8 md:p-10 bg-teal-50 rounded-lg">
+              <div className="text-5xl md:text-4xl font-bold text-teal-600 mb-4">98%</div>
+              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Client Satisfaction</div>
+              <p className="text-gray-600 text-base">Consistently high client satisfaction rates across all project types</p>
             </div>
-            <div className="text-center p-8 bg-gold-50 rounded-lg">
-              <div className="text-4xl font-bold text-yellow-600 mb-2">VR</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Virtual Tour Technology</div>
-              <p className="text-gray-600">Cutting-edge visualization technology for project planning and client engagement</p>
+            <div className="text-center p-8 md:p-10 bg-gold-50 rounded-lg">
+              <div className="text-5xl md:text-4xl font-bold text-yellow-600 mb-4">VR</div>
+              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Virtual Tour Technology</div>
+              <p className="text-gray-600 text-base">Cutting-edge visualization technology for project planning and client engagement</p>
             </div>
           </div>
           <div className="text-center mt-12">

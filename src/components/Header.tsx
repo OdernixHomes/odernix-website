@@ -29,6 +29,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -74,6 +75,24 @@ const Header = () => {
     { name: 'Blog', path: '/blog' },
   ];
 
+  const servicesDropdown = [
+    { name: 'Construction & Procurement Engineering', path: '/services#construction' },
+    { name: 'Energy Solutions', path: '/services#energy' },
+    { name: 'Oil & Gas Services', path: '/services#oil-gas' },
+    { name: 'Medical & Office Supplies', path: '/services#supplies' },
+    { name: 'NDT (Non-Destructive Testing)', path: '/services#ndt' },
+    { name: 'Real Estate & Construction', path: '/services#real-estate' }
+  ];
+
+  const projectsDropdown = [
+    { name: 'Odernix Homes Development', path: '/projects#real-estate' },
+    { name: 'Marine Engineering Capabilities', path: '/projects#marine' },
+    { name: 'Energy Solutions Portfolio', path: '/projects#energy' },
+    { name: 'Oil & Gas Service Readiness', path: '/projects#oil-gas' },
+    { name: 'NDT Inspection Services', path: '/projects#ndt' },
+    { name: 'Global Supply Chain Network', path: '/projects#supply' }
+  ];
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
@@ -91,19 +110,66 @@ const Header = () => {
 
           {/* Desktop Navigation - Show on desktop and large tablets */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-base lg:text-lg font-semibold transition-colors duration-200 hover:text-purple-600 ${
-                  location.pathname === item.path 
-                    ? 'text-purple-600 border-b-2 border-purple-600 pb-1' 
-                    : 'text-gray-700'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const hasDropdown = item.name === 'Services' || item.name === 'Projects';
+              const isActive = location.pathname === item.path;
+              
+              if (hasDropdown) {
+                return (
+                  <div
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <Link
+                      to={item.path}
+                      className={`text-base lg:text-lg font-semibold transition-colors duration-200 hover:text-purple-600 ${
+                        isActive 
+                          ? 'text-purple-600 border-b-2 border-purple-600 pb-1' 
+                          : 'text-gray-700'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                    
+                    {/* Dropdown Menu */}
+                    <div 
+                      className={`absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 transition-all duration-300 ${
+                        activeDropdown === item.name 
+                          ? 'opacity-100 visible translate-y-0' 
+                          : 'opacity-0 invisible -translate-y-2'
+                      }`}
+                    >
+                      {(item.name === 'Services' ? servicesDropdown : projectsDropdown).map((dropdownItem, index) => (
+                        <Link
+                          key={index}
+                          to={dropdownItem.path}
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-200"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`text-base lg:text-lg font-semibold transition-colors duration-200 hover:text-purple-600 ${
+                    isActive 
+                      ? 'text-purple-600 border-b-2 border-purple-600 pb-1' 
+                      : 'text-gray-700'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Search and Contact - Show on desktop and large tablets */}

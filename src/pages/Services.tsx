@@ -224,11 +224,11 @@ const Services = () => {
     ]
   };
 
-  const caseStudies = [
-    { title: "Niger Delta Dredging", year: "2024", category: "Marine Engineering", description: "Large-scale coastal reclamation project" },
-    { title: "Abuja Smart Grid", year: "2023", category: "Energy", description: "IoT-enabled power distribution system" },
-    { title: "Enugu Odernix Homes", year: "2024", category: "Real Estate", description: "Luxury residential development" },
-    { title: "Port Harcourt Supply Chain", year: "2024", category: "Supply", description: "Integrated logistics solution" }
+  const capabilities = [
+    { title: "Advanced NDT Services", category: "Quality Assurance", description: "ASNT certified technicians ready for comprehensive inspection services", icon: "🔍" },
+    { title: "Digital Engineering Solutions", category: "Technology", description: "3D modeling, IoT monitoring, and digital twin capabilities", icon: "💻" },
+    { title: "Sustainable Energy Systems", category: "Green Technology", description: "Solar, smart grid, and energy storage solution expertise", icon: "⚡" },
+    { title: "Global Supply Network", category: "Logistics", description: "International procurement and distribution capabilities", icon: "🌍" }
   ];
 
   return (
@@ -237,7 +237,7 @@ const Services = () => {
       <section 
         ref={heroSection.elementRef}
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
+        style={{ backgroundImage: 'url("../energy/energy2.jpg")' }}
       >
         {/* Animated overlay background */}
         <div 
@@ -258,17 +258,17 @@ const Services = () => {
           <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex items-center justify-center">
+          <div className={`space-y-6 sm:space-y-8 md:space-y-10 transform transition-all duration-1000 ${
             heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
               Our
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed px-4">
               Odernix Nigeria Limited delivers a diverse portfolio of services spanning construction, energy, 
               oil & gas, supply, and real estate, leveraging cutting-edge technology, sustainability practices, 
               and global expertise.
@@ -305,36 +305,36 @@ const Services = () => {
           </div>
 
           {/* Desktop Tab Navigation */}
-          <div className="hidden sm:flex flex-wrap justify-center mb-12 border-b border-gray-200">
+          <div className="hidden sm:flex flex-wrap justify-center mb-12 border-b border-gray-200 gap-2">
             {services.map((service, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center space-x-2 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 font-medium transition-colors duration-200 border-b-2 text-xs sm:text-sm lg:text-base ${
+                className={`flex items-center space-x-2 px-4 md:px-6 py-4 font-medium transition-colors duration-200 border-b-2 text-sm md:text-base rounded-t-lg ${
                   activeTab === index
-                    ? 'border-purple-600 text-purple-600'
-                    : 'border-transparent text-gray-600 hover:text-purple-600'
+                    ? 'border-purple-600 text-purple-600 bg-purple-50'
+                    : 'border-transparent text-gray-600 hover:text-purple-600 hover:bg-gray-50'
                 }`}
               >
                 {service.icon}
-                <span className="truncate max-w-[120px] sm:max-w-none">{service.title}</span>
+                <span className="truncate max-w-[140px] md:max-w-none">{service.title}</span>
               </button>
             ))}
           </div>
 
           {/* Tab Content */}
-          <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div>
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="text-purple-600">
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-6">
+                  <div className="text-purple-600 text-3xl sm:text-2xl">
                     {services[activeTab].icon}
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
                     {services[activeTab].title}
                   </h2>
                 </div>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
                   {services[activeTab].description}
                 </p>
                 <div className="bg-teal-50 p-6 rounded-lg mb-8">
@@ -401,11 +401,11 @@ const Services = () => {
             </div>
 
             {/* NDT Methods Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
               {ndtServices.methods.map((method, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-3">{method.name}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{method.description}</p>
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300">
+                  <h3 className="text-xl md:text-2xl font-semibold text-blue-800 mb-4">{method.name}</h3>
+                  <p className="text-gray-600 mb-6 text-base leading-relaxed">{method.description}</p>
                   <div>
                     <h4 className="font-medium text-gray-800 mb-2">Applications:</h4>
                     <ul className="space-y-1">
@@ -468,7 +468,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Case Studies */}
+      {/* Our Capabilities */}
       <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url("/background.jpg")' }}
       >
@@ -477,28 +477,28 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Case Studies
+              Our Capabilities
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Real-world examples of our expertise across different service areas
+              Ready-to-deploy expertise and cutting-edge solutions across all engineering disciplines
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+                <div className="text-5xl md:text-4xl mb-6">{capability.icon}</div>
+                <div className="flex items-center justify-center mb-4">
                   <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-                    {study.category}
+                    {capability.category}
                   </span>
-                  <span className="text-sm text-gray-500">{study.year}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{study.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{study.description}</p>
+                <h3 className="text-xl md:text-lg font-semibold text-gray-900 mb-4">{capability.title}</h3>
+                <p className="text-gray-600 text-base md:text-sm mb-6">{capability.description}</p>
                 <Link
-                  to="/projects"
+                  to="/contact"
                   className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center space-x-1 text-sm"
                 >
-                  <span>View Details</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -509,7 +509,7 @@ const Services = () => {
               to="/contact"
               className="inline-flex items-center space-x-2 bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200"
             >
-              <span>Request a Case Study</span>
+              <span>Discuss Your Project</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

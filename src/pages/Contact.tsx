@@ -239,22 +239,22 @@ const Contact = () => {
     {
       icon: <CheckCircle className="w-8 h-8" />,
       title: "Expert Consultation",
-      description: "Free initial assessment by our experienced engineering professionals"
+      description: "Free initial assessment by our experienced engineering professionals and certified specialists"
     },
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Quick Response",
-      description: "We respond to all inquiries within 24 hours during business days"
+      description: "We respond to all inquiries within 24 hours during business days with detailed proposals"
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Proven Track Record",
-      description: "Over 70 successful projects across multiple industries and countries"
+      title: "Ready Expertise",
+      description: "13+ international certifications and proven capabilities across multiple engineering disciplines"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Dedicated Support",
-      description: "Personal project manager assigned to guide you through the entire process"
+      description: "Personal project manager assigned to guide you from initial consultation to project completion"
     }
   ];
 
@@ -264,7 +264,7 @@ const Contact = () => {
       <section 
         ref={heroSection.elementRef}
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/contact-background.jpg")' }}
+        style={{ backgroundImage: 'url("/contact-us.jpg")' }}
       >
         {/* Animated overlay background */}
         <div 
@@ -285,17 +285,17 @@ const Contact = () => {
           <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex items-center justify-center">
+          <div className={`space-y-6 sm:space-y-8 md:space-y-10 transform transition-all duration-1000 ${
             heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
               Let's Build Something
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
                 Amazing Together
               </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed px-4">
               Connect with Odernix Nigeria Limited for world-class engineering solutions, 
               or reach Odernix Homes for luxury residential projects. We're here to turn 
               your vision into reality with innovative expertise and proven excellence.
@@ -334,9 +334,9 @@ const Contact = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-blue-900/75 to-teal-900/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Enhanced Contact Form */}
-            <div className={`bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 transform transition-all duration-1000 ${
+            <div className={`bg-white/95 backdrop-blur-sm rounded-xl md:rounded-2xl lg:rounded-3xl shadow-2xl p-6 md:p-8 lg:p-10 transform transition-all duration-1000 ${
               contactFormSection.isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
             }`}>
               <div className="text-center mb-8 sm:mb-10">
@@ -365,7 +365,7 @@ const Contact = () => {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                       Full Name *
@@ -377,7 +377,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300 text-base"
                       placeholder="Your full name"
                     />
                   </div>
@@ -392,7 +392,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300 text-base"
                       placeholder="your.email@example.com"
                     />
                   </div>

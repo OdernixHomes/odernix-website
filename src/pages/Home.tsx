@@ -19,8 +19,8 @@ const Home = () => {
   const statsSection = useIntersectionObserver();
   
   // Animated counters
-  const projectsCount = useCountAnimation(70, 2000, statsSection.isVisible);
-  const clientsCount = useCountAnimation(98, 2000, statsSection.isVisible);
+  const certificationsCount = useCountAnimation(13, 2000, statsSection.isVisible);
+  const serviceAreaCount = useCountAnimation(6, 2000, statsSection.isVisible);
   const yearsCount = useCountAnimation(9, 1500, statsSection.isVisible);
 
   const heroSlides = [
@@ -36,7 +36,7 @@ const Home = () => {
       subtitle: "From IPPs to smart grids, we deliver energy solutions.",
       cta: "Learn About Energy",
       ctaLink: "/services",
-      image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
+      image: "../energy/energy1.jpg"
     },
     {
       title: "Oil & Gas Mastery",
@@ -109,11 +109,11 @@ const Home = () => {
   ];
 
   const whyChooseUs = [
-    { icon: <CheckCircle className="w-6 h-6" />, title: "Proven Track Record", description: "Over 70 successful projects since 2016" },
-    { icon: <Award className="w-6 h-6" />, title: "Safety Standards", description: "ISO 9001:2015 certified with comprehensive safety protocols" },
+    { icon: <CheckCircle className="w-6 h-6" />, title: "Industry Expertise", description: "Expert team ready to deliver world-class engineering solutions" },
+    { icon: <Award className="w-6 h-6" />, title: "Global Certifications", description: "ISO 9001:2015 and multiple international standards compliance" },
     { icon: <Lightbulb className="w-6 h-6" />, title: "Innovation Hub", description: "Cutting-edge technology and digital solutions" },
-    { icon: <Leaf className="w-6 h-6" />, title: "Sustainability Leader", description: "Committed to environmental responsibility" },
-    { icon: <Heart className="w-6 h-6" />, title: "Client-Centric Approach", description: "98% client satisfaction rate" }
+    { icon: <Leaf className="w-6 h-6" />, title: "Sustainability Leader", description: "Committed to environmental responsibility and green practices" },
+    { icon: <Heart className="w-6 h-6" />, title: "Client-Centric Approach", description: "Dedicated to exceeding expectations with personalized service" }
   ];
 
 
@@ -136,11 +136,23 @@ const Home = () => {
   const minSwipeDistance = 50;
 
   const onTouchStart = (e: React.TouchEvent) => {
+    // Don't handle touch events on buttons or links
+    const target = e.target as Element;
+    if (target.closest('button') || target.closest('a')) {
+      return;
+    }
+    
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
+    // Don't handle touch events on buttons or links
+    const target = e.target as Element;
+    if (target.closest('button') || target.closest('a')) {
+      return;
+    }
+    
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
@@ -173,7 +185,7 @@ const Home = () => {
       
       {/* Hero Carousel */}
       <section 
-        className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden z-10"
+        className="relative h-screen overflow-hidden z-10"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -203,9 +215,9 @@ const Home = () => {
                   <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-purple-400/30 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4s' }}></div>
                 </div>
               )}
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-3xl">
-                  <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight transform transition-all duration-1200 ${
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div className="max-w-4xl w-full">
+                  <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-1200 ${
                     index === currentSlide ? 'translate-y-0 opacity-100 scale-100 rotate-0' : 'translate-y-12 opacity-0 scale-95 -rotate-1'
                   }`} style={{ 
                     transitionDelay: '300ms',
@@ -213,7 +225,7 @@ const Home = () => {
                   }}>
                     {slide.title}
                   </h1>
-                  <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed transform transition-all duration-1100 ${
+                  <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-6 sm:mb-8 md:mb-10 leading-relaxed transform transition-all duration-1100 ${
                     index === currentSlide ? 'translate-y-0 translate-x-0 opacity-100 scale-100' : 'translate-y-10 translate-x-4 opacity-0 scale-95'
                   }`} style={{ 
                     transitionDelay: '500ms',
@@ -232,8 +244,10 @@ const Home = () => {
                         href={slide.ctaLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => trackEvent('click', 'hero_cta', slide.cta)}
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
+                        onClick={() => {
+                          trackEvent('click', 'hero_cta', slide.cta);
+                        }}
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-6 sm:px-8 md:px-10 py-4 md:py-5 rounded-lg text-base sm:text-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
                       >
                         <span>{slide.cta}</span>
                         <ExternalLink className="w-5 h-5" />
@@ -241,8 +255,10 @@ const Home = () => {
                     ) : (
                       <Link
                         to={slide.ctaLink}
-                        onClick={() => trackEvent('click', 'hero_cta', slide.cta)}
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
+                        onClick={() => {
+                          trackEvent('click', 'hero_cta', slide.cta);
+                        }}
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-6 sm:px-8 md:px-10 py-4 md:py-5 rounded-lg text-base sm:text-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
                       >
                         <span>{slide.cta}</span>
                         <ArrowRight className="w-5 h-5" />
@@ -258,24 +274,24 @@ const Home = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-colors z-20"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-colors z-20"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-20">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/50'
               }`}
             />
@@ -290,38 +306,38 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 text-center">
             <div className={`transform transition-all duration-1000 ${
               statsSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`} style={{ transitionDelay: '200ms' }}>
-              <div className="flex items-center justify-center mb-4">
-                <TrendingUp className="w-8 h-8 text-teal-400 mr-3" />
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-400">{projectsCount}+</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-4">
+                <TrendingUp className="w-10 h-10 sm:w-8 sm:h-8 text-teal-400 mb-2 sm:mb-0 sm:mr-3" />
+                <span className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-teal-400">{certificationsCount}+</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Successful Projects</h3>
-              <p className="text-gray-300">Delivered across industries since 2016</p>
+              <h3 className="text-xl sm:text-lg font-semibold mb-2">Industry Certifications</h3>
+              <p className="text-gray-300 text-base sm:text-sm">Global standards and accreditations</p>
             </div>
             
             <div className={`transform transition-all duration-1000 ${
               statsSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`} style={{ transitionDelay: '400ms' }}>
-              <div className="flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-purple-400 mr-3" />
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400">{clientsCount}%</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-4">
+                <Users className="w-10 h-10 sm:w-8 sm:h-8 text-purple-400 mb-2 sm:mb-0 sm:mr-3" />
+                <span className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-400">{serviceAreaCount}</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Client Satisfaction</h3>
-              <p className="text-gray-300">Exceeding expectations consistently</p>
+              <h3 className="text-xl sm:text-lg font-semibold mb-2">Service Areas</h3>
+              <p className="text-gray-300 text-base sm:text-sm">Comprehensive engineering solutions</p>
             </div>
             
             <div className={`transform transition-all duration-1000 ${
               statsSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`} style={{ transitionDelay: '600ms' }}>
-              <div className="flex items-center justify-center mb-4">
-                <Zap className="w-8 h-8 text-blue-400 mr-3" />
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400">{yearsCount}+</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-4">
+                <Zap className="w-10 h-10 sm:w-8 sm:h-8 text-blue-400 mb-2 sm:mb-0 sm:mr-3" />
+                <span className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400">{yearsCount}+</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Years of Excellence</h3>
-              <p className="text-gray-300">Leading engineering innovation</p>
+              <h3 className="text-xl sm:text-lg font-semibold mb-2">Years of Excellence</h3>
+              <p className="text-gray-300 text-base sm:text-sm">Leading engineering innovation</p>
             </div>
           </div>
         </div>
@@ -390,11 +406,11 @@ const Home = () => {
               Comprehensive solutions across six key sectors, delivering excellence in every project
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className={`card-hover hover-glow bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-2xl group border-l-4 border-transparent hover:border-purple-500 relative overflow-hidden ${
+                className={`card-hover hover-glow bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl group border-l-4 border-transparent hover:border-purple-500 relative overflow-hidden ${
                   servicesSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
                 }`}
                 style={{ 
@@ -405,9 +421,9 @@ const Home = () => {
                 {/* Floating background element */}
                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                 <div className="relative">
-                  <div className="text-3xl sm:text-4xl mb-4 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 hover:animate-bounce">{service.icon}</div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 group-hover:text-purple-600 transition-colors duration-300">{service.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
+                  <div className="text-4xl md:text-5xl mb-4 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 hover:animate-bounce">{service.icon}</div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">{service.title}</h3>
+                  <p className="text-base text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
                   <Link
                     to="/services"
                     className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center space-x-1 group-hover:translate-x-3 hover:scale-105 transition-all duration-300"
@@ -439,7 +455,7 @@ const Home = () => {
               Trusted by clients across Nigeria and internationally for our commitment to excellence
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
             {whyChooseUs.map((item, index) => (
               <div 
                 key={index} 
@@ -448,14 +464,14 @@ const Home = () => {
                 }`}
                 style={{ transitionDelay: `${(index + 1) * 100}ms` }}
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6 text-white group-hover:bg-white/40 group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-500 relative overflow-hidden">
+                <div className="inline-flex items-center justify-center w-24 h-24 md:w-20 md:h-20 bg-white/20 rounded-full mb-6 text-white group-hover:bg-white/40 group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-500 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-pink-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-yellow-300 transition-all duration-300 group-hover:scale-105">{item.title}</h3>
-                <p className="text-purple-100 group-hover:text-white transition-all duration-300 group-hover:scale-105">{item.description}</p>
+                <h3 className="text-2xl md:text-xl font-semibold mb-4 group-hover:text-yellow-300 transition-all duration-300 group-hover:scale-105">{item.title}</h3>
+                <p className="text-purple-100 group-hover:text-white transition-all duration-300 group-hover:scale-105 text-base">{item.description}</p>
               </div>
             ))}
           </div>

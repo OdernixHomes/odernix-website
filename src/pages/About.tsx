@@ -126,7 +126,7 @@ const About = () => {
       subtitle: "Infrastructure Excellence",
       description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with NDT quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
       services: ["Foundation Engineering", "Marine Construction", "Civil Works", "NDT Inspection Services", "Infrastructure Development", "Offshore Platforms"],
-      stats: "70+ Projects Completed"
+      stats: "Ready to Deliver Excellence"
     },
     {
       icon: <Zap className="w-12 h-12" />,
@@ -134,7 +134,7 @@ const About = () => {
       subtitle: "Powering the Future",
       description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions.",
       services: ["Independent Power Projects", "Renewable Energy", "Smart Grid Systems", "Energy Storage", "Power Distribution"],
-      stats: "150MW+ Generated"
+      stats: "Sustainable Power Solutions"
     },
     {
       icon: <Globe className="w-12 h-12" />,
@@ -142,7 +142,7 @@ const About = () => {
       subtitle: "Upstream & Downstream Excellence",
       description: "Comprehensive drilling, exploration, pipeline construction, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",
       services: ["Drilling & Exploration", "Pipeline Construction", "Offshore Support", "FPSO Operations", "Environmental Services"],
-      stats: "50+ Wells Drilled"
+      stats: "Advanced Technology Ready"
     },
     {
       icon: <Users className="w-12 h-12" />,
@@ -150,7 +150,7 @@ const About = () => {
       subtitle: "Integrated Logistics Solutions",
       description: "Medical supplies, office equipment, oilfield materials, and comprehensive logistics solutions. Serving healthcare, corporate, and industrial sectors with reliable supply chains.",
       services: ["Medical Supplies", "Office Equipment", "Oilfield Materials", "Logistics Solutions", "Supply Chain Management"],
-      stats: "500+ Clients Served"
+      stats: "Global Supply Network"
     },
     {
       icon: <Search className="w-12 h-12" />,
@@ -218,18 +218,18 @@ const About = () => {
           <div className="absolute top-3/4 right-1/6 w-4 h-4 sm:w-5 sm:h-5 bg-white/10 rotate-12 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className={`space-y-6 sm:space-y-8 transform transition-all duration-1000 ${
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex items-center justify-center">
+          <div className={`space-y-6 sm:space-y-8 md:space-y-10 transform transition-all duration-1000 ${
             heroSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
               About
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
                 Odernix
               </span>
               Nigeria Limited
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 max-w-5xl mx-auto font-light leading-relaxed px-4">
               Engineering Excellence Since 2016 • Building the Future Across Nigeria and Beyond
             </p>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
@@ -388,11 +388,11 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {values.map((value, index) => (
               <div 
                 key={index} 
-                className={`group relative bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-xl text-center hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-gray-100 ${
+                className={`group relative bg-white/95 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl shadow-xl text-center hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-gray-100 ${
                   valuesSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
