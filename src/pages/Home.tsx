@@ -43,7 +43,7 @@ const Home = () => {
       subtitle: "Drilling, pipelines, and marine support with precision.",
       cta: "Discover Oil & Gas",
       ctaLink: "/services",
-      image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
+      image: "../oil-gas/oil-and-gas-background.jpg"
     },
     {
       title: "Global Supply Expertise",
@@ -109,7 +109,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
@@ -169,39 +169,59 @@ const Home = () => {
         {heroSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center"
+              className={`absolute inset-0 bg-cover bg-center transition-transform duration-[7000ms] ease-linear ${
+                index === currentSlide ? 'scale-110' : 'scale-100'
+              }`}
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0 bg-black/50"></div>
             </div>
             <div className="relative h-full flex items-center">
+              {/* Floating particles for current slide */}
+              {index === currentSlide && (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>
+                  <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-teal-400/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-blue-400/50 rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+                  <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-purple-400/30 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4s' }}></div>
+                </div>
+              )}
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl">
-                  <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight transform transition-all duration-1000 ${
-                    index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '200ms' }}>
+                  <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight transform transition-all duration-1200 ${
+                    index === currentSlide ? 'translate-y-0 opacity-100 scale-100 rotate-0' : 'translate-y-12 opacity-0 scale-95 -rotate-1'
+                  }`} style={{ 
+                    transitionDelay: '300ms',
+                    transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+                  }}>
                     {slide.title}
                   </h1>
-                  <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed transform transition-all duration-1000 ${
-                    index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '400ms' }}>
+                  <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed transform transition-all duration-1100 ${
+                    index === currentSlide ? 'translate-y-0 translate-x-0 opacity-100 scale-100' : 'translate-y-10 translate-x-4 opacity-0 scale-95'
+                  }`} style={{ 
+                    transitionDelay: '500ms',
+                    transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                  }}>
                     {slide.subtitle}
                   </p>
                   <div className={`transform transition-all duration-1000 ${
-                    index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '600ms' }}>
+                    index === currentSlide ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-8 opacity-0 scale-90'
+                  }`} style={{ 
+                    transitionDelay: '700ms',
+                    transitionTimingFunction: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                  }}>
                     {slide.ctaLink.startsWith('http') ? (
                       <a
                         href={slide.ctaLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => trackEvent('click', 'hero_cta', slide.cta)}
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
                       >
                         <span>{slide.cta}</span>
                         <ExternalLink className="w-5 h-5" />
@@ -210,7 +230,7 @@ const Home = () => {
                       <Link
                         to={slide.ctaLink}
                         onClick={() => trackEvent('click', 'hero_cta', slide.cta)}
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm sm:text-base font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-rotate-1 shadow-xl hover:shadow-2xl animate-pulse hover:animate-none"
                       >
                         <span>{slide.cta}</span>
                         <ArrowRight className="w-5 h-5" />
@@ -449,37 +469,52 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
-            {[
-              { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png' },
-              { name: 'BSI Group', src: '/certifications /BSI.png' },
-              { name: 'LEEA', src: '/certifications /LEEA.png' },
-              { name: 'NCDMB', src: '/certifications /NCDMB.png' },
-              { name: 'ASNT', src: '/certifications /ASNT.png' },
-              { name: 'IWCF', src: '/certifications /IWCF.png' },
-              { name: 'PECB', src: '/certifications /PECB.png' },
-              { name: 'NipeX', src: '/certifications /NipeX.png' },
-              { name: 'OGTAN', src: '/certifications /OGTAN.png' },
-              { name: 'NNPC', src: '/certifications /NNPC.png' },
-              { name: 'DUNS', src: '/certifications /DUNS.png' },
-              { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' },
-              { name: 'ISO', src: '/certifications /ISO.jpg' }
-            ].map((cert, index) => (
-              <div 
-                key={index} 
-                className="flex items-center justify-center p-2 sm:p-4 rounded-xl bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-blue-50 transition-all duration-500 w-24 h-16 sm:w-32 sm:h-20 shadow-md hover:shadow-lg group hover-lift border border-gray-100 hover:border-purple-200"
-                style={{
-                  transitionDelay: `${index * 50}ms`
-                }}
-              >
-                <img 
-                  src={cert.src} 
-                  alt={cert.name}
-                  className="max-h-8 sm:max-h-12 max-w-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 filter group-hover:brightness-110"
-                  title={cert.name}
-                />
-              </div>
-            ))}
+          {/* Continuous Scrolling Marquee */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of certifications */}
+              {[
+                { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png' },
+                { name: 'BSI Group', src: '/certifications /BSI.png' },
+                { name: 'LEEA', src: '/certifications /LEEA.png' },
+                { name: 'NCDMB', src: '/certifications /NCDMB.png' },
+                { name: 'ASNT', src: '/certifications /ASNT.png' },
+                { name: 'IWCF', src: '/certifications /IWCF.png' },
+                { name: 'PECB', src: '/certifications /PECB.png' },
+                { name: 'NipeX', src: '/certifications /NipeX.png' },
+                { name: 'OGTAN', src: '/certifications /OGTAN.png' },
+                { name: 'NNPC', src: '/certifications /NNPC.png' },
+                { name: 'DUNS', src: '/certifications /DUNS.png' },
+                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' },
+                { name: 'ISO', src: '/certifications /ISO.jpg' }
+              ].concat([
+                { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png' },
+                { name: 'BSI Group', src: '/certifications /BSI.png' },
+                { name: 'LEEA', src: '/certifications /LEEA.png' },
+                { name: 'NCDMB', src: '/certifications /NCDMB.png' },
+                { name: 'ASNT', src: '/certifications /ASNT.png' },
+                { name: 'IWCF', src: '/certifications /IWCF.png' },
+                { name: 'PECB', src: '/certifications /PECB.png' },
+                { name: 'NipeX', src: '/certifications /NipeX.png' },
+                { name: 'OGTAN', src: '/certifications /OGTAN.png' },
+                { name: 'NNPC', src: '/certifications /NNPC.png' },
+                { name: 'DUNS', src: '/certifications /DUNS.png' },
+                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' },
+                { name: 'ISO', src: '/certifications /ISO.jpg' }
+              ]).map((cert, index) => (
+                <div 
+                  key={index}
+                  className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-blue-50 transition-all duration-500 w-24 h-16 sm:w-32 sm:h-20 shadow-md hover:shadow-lg group hover-lift border border-gray-100 hover:border-purple-200"
+                >
+                  <img 
+                    src={cert.src} 
+                    alt={cert.name}
+                    className="max-h-8 sm:max-h-12 max-w-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 filter group-hover:brightness-110"
+                    title={cert.name}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         </div>

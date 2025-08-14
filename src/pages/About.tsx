@@ -456,23 +456,30 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="group bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-lg text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
-                <div className="flex items-center justify-center h-24 mb-6">
-                  <img
-                    src={cert.src}
-                    alt={cert.name}
-                    className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover:scale-110"
-                    title={cert.name}
-                  />
+          {/* Continuous Scrolling Marquee */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* Duplicate certifications for seamless scrolling */}
+              {certifications.concat(certifications).map((cert, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mx-6 sm:mx-8 group bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100 w-48 sm:w-56"
+                >
+                  <div className="flex items-center justify-center h-16 sm:h-20 mb-4 sm:mb-6">
+                    <img
+                      src={cert.src}
+                      alt={cert.name}
+                      className="max-h-12 sm:max-h-16 max-w-full object-contain transition-all duration-300 group-hover:scale-110"
+                      title={cert.name}
+                    />
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                    {cert.name}
+                  </h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{cert.description}</p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
-                  {cert.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
