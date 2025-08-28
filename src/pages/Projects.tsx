@@ -15,8 +15,8 @@ const Projects = () => {
       category: "Real Estate",
       location: "Abuja, Nigeria",
       description: "Luxury residential development featuring modern homes with smart home technology and sustainable design by our subsidiary Odernix Homes.",
-      image: "../../assets/images/odernix-homes-terrazza.jpg",
-      status: "Ongoing"
+      image: "./terrazza.png",
+      status: "Completed"
     },
     {
       title: "Abuja Odernix Homes Phase - Bastion",
@@ -25,7 +25,7 @@ const Projects = () => {
       location: "Abuja, Nigeria",
       description: "Planned expansion of luxury residential development with enhanced sustainability features and smart infrastructure.",
       image: "./odernix-bastion.jpg",
-      status: "Planning"
+      status: "Ongoing"
     },
     // Service Capabilities - Ready to deliver
     {

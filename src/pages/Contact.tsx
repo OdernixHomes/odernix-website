@@ -138,9 +138,9 @@ const Contact = () => {
       city: "Abuja",
       country: "Nigeria",
       address: "A4, 29B N'djamena Crescent, off Aminu Kano Crescent, Wuse II, 900288, AMAC Abuja",
-      phone: "+234(0) 703 490 00 69",
+      phone: "+234(0) 9128 999 972",
       email: "info@odernix.com",
-      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       type: "Main Office",
       description: "Our flagship headquarters housing executive leadership, engineering teams, and project management divisions.",
       color: "from-purple-500 to-purple-600"
@@ -150,7 +150,7 @@ const Contact = () => {
       city: "Port Harcourt",
       country: "Nigeria",
       address: "No 12 Agip Road, Mile 4 Rumueme, Port Harcourt, Rivers State, Nigeria",
-      phone: "+234(0) 703 490 00 69",
+      phone: "+234(0) 9128 999 972",
       email: "portharcourt@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       type: "Regional Office",
@@ -158,14 +158,14 @@ const Contact = () => {
       color: "from-teal-500 to-teal-600"
     },
     {
-      name: "Odernix Homes Enugu",
+      name: "Odernix Enugu",
       city: "Enugu",
       country: "Nigeria",
       address: "19 IGBARIAM STREET, ACHARA LAYOUT, ENUGU, ENUGU STATE",
-      phone: "+234(0) 703 490 00 69",
-      email: "homes@odernixhomes.com",
+      phone: "+234(0) 9128 999 972",
+      email: "info@odernix.com",
       hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
-      type: "Real Estate Hub",
+      type: "Regional Office",
       description: "Dedicated real estate and residential construction hub serving the Southeast region with luxury homes.",
       color: "from-green-500 to-green-600"
     },
@@ -200,8 +200,8 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Call Us",
       description: "Speak directly with our expert team",
-      value: "+234(0) 703 490 00 69",
-      action: "tel:+2347034900069",
+      value: "+234(0) 9128 999 972",
+      action: "tel:+2349128999972",
       gradient: "from-blue-500 to-blue-700",
       feature: "24/7 Support Available"
     },
@@ -218,8 +218,8 @@ const Contact = () => {
       icon: <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "WhatsApp",
       description: "Quick consultation via WhatsApp",
-      value: "+234 703 490 0069",
-      action: "https://wa.me/2347034900069",
+      value: "+234 9128 999 972",
+      action: "https://wa.me/2349128999972",
       gradient: "from-green-500 to-green-700",
       feature: "Instant messaging support"
     }
@@ -674,7 +674,7 @@ const Contact = () => {
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-teal-500 opacity-10"></div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.9485207477644!2d7.489184314573678!3d9.072264993435657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48aeb%3A0x4b5c7b3a3c2d6a8!2sN&#39;djamena%20Crescent%2C%20Wuse%20II%20900288%2C%20Abuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1699876543210!5m2!1sen!2sng"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3939.7642573241!2d7.4631911!3d9.0813301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0bad6b8e0b5d%3A0x5d4c8e9f2a1b6c7e!2sOdernix%20Homes!5e0!3m2!1sen!2sng!4v1699876543210!5m2!1sen!2sng&z=17&q=Odernix+Homes,+29b+Ndjamena+Crescent,+Wuse,+Abuja+900001,+Federal+Capital+Territory"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -682,8 +682,9 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="relative z-10"
-                title="Odernix Nigeria Limited Head Office Location"
-              />
+                title="Odernix Homes - 29b Ndjamena Crescent, Wuse, Abuja Location"
+
+/>
             </div>
             
             <div className="mt-8 bg-gradient-to-r from-purple-50 to-teal-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8">
@@ -692,15 +693,15 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-purple-600 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">Corporate Address</h4>
-                    <p className="text-xs sm:text-sm text-gray-600">A4, 29B N'djamena Crescent, Wuse II</p>
+                    <p className="text-xs sm:text-sm text-gray-600">29b Ndjamena Crescent, Wuse, Abuja 900001</p>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3">
                   <Phone className="w-6 h-6 text-teal-600 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">Direct Line</h4>
-                    <a href="tel:+2347034900069" className="text-xs sm:text-sm text-teal-600 hover:text-teal-700 font-medium">
-                      +234(0) 703 490 00 69
+                    <a href="tel:+2349128999972" className="text-xs sm:text-sm text-teal-600 hover:text-teal-700 font-medium">
+                      +234(0) 912 8999 972
                     </a>
                   </div>
                 </div>
@@ -708,7 +709,7 @@ const Contact = () => {
                   <Clock className="w-6 h-6 text-blue-600 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm sm:text-base">Business Hours</h4>
-                    <p className="text-xs sm:text-sm text-gray-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                    <p className="text-xs sm:text-sm text-gray-600">Mon - Fri: 9:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>

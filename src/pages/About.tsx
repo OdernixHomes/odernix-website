@@ -71,7 +71,7 @@ const About = () => {
       city: "Abuja",
       country: "Nigeria",
       address: "A4, 29B N'Djamena Crescent, off Aminu Kano Crescent, Wuse II, Abuja, Nigeria",
-      phone: "+234 703 490 0069",
+      phone: "+234 9128 999 972",
       email: "info@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       description: "Our flagship headquarters housing executive leadership, engineering teams, and project management divisions."
@@ -81,7 +81,7 @@ const About = () => {
       city: "Port Harcourt",
       country: "Nigeria", 
       address: "Port Harcourt, Rivers State, Nigeria",
-      phone: "+234 703 490 0069",
+      phone: "+234 9128 999 972",
       email: "portharcourt@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination."
@@ -91,7 +91,7 @@ const About = () => {
       city: "Enugu",
       country: "Nigeria",
       address: "Enugu, Enugu State, Nigeria",
-      phone: "+234 703 490 0069",
+      phone: "+234 9128 999 972",
       email: "homes@odernixhomes.com",
       hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
       description: "Dedicated real estate and residential construction hub serving the Southeast region."

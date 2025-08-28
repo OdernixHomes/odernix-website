@@ -24,13 +24,14 @@ const Home = () => {
   const yearsCount = useCountAnimation(9, 1500, statsSection.isVisible);
 
   const heroSlides = [
-    {
-      title: "Engineering Excellence Across Industries",
-      subtitle: "Odernix Nigeria Limited: Leading since 2016 with innovative solutions.",
-      cta: "Explore Our Services",
-      ctaLink: "/services",
-      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
+     {
+      title: "Your Dream Home Awaits",
+      subtitle: "Odernix Homes: Crafting luxury residences with care.",
+      cta: "Visit Odernix Homes",
+      ctaLink: import.meta.env.VITE_ODERNIX_HOMES_URL || "https://www.odernixhomes.com",
+      image: "/odernix-homes-apartment.jpg"
     },
+    
     {
       title: "Powering a Sustainable Tomorrow",
       subtitle: "From IPPs to smart grids, we deliver energy solutions.",
@@ -60,19 +61,20 @@ const Home = () => {
       image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
     },
     {
+      title: "Engineering Excellence Across Industries",
+      subtitle: "Odernix Nigeria Limited: Leading since 2016 with innovative solutions.",
+      cta: "Explore Our Services",
+      ctaLink: "/services",
+      image: "/home-page-background.jpg"
+    },
+    {
       title: "NDT Excellence & Quality Assurance",
       subtitle: "Advanced non-destructive testing for structural integrity and safety across all industries.",
       cta: "Learn More",
       ctaLink: "/services",
       image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
-    },
-    {
-      title: "Your Dream Home Awaits",
-      subtitle: "Odernix Homes: Crafting luxury residences with care.",
-      cta: "Visit Odernix Homes",
-      ctaLink: import.meta.env.VITE_ODERNIX_HOMES_URL || "https://www.odernixhomes.com",
-      image: "/odernix-homes-apartment.jpg"
     }
+   
   ];
 
   const services = [
@@ -299,7 +301,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
+      {/* Statistics Section
       <section 
         ref={statsSection.elementRef}
         className="relative py-12 sm:py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-teal-900 text-white overflow-hidden"
@@ -341,7 +343,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Teaser */}
       <section 

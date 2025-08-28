@@ -55,7 +55,7 @@ The following environment variables need to be configured in your `.env` file:
 | `VITE_SITE_URL` | Your website's canonical URL | `https://www.odernix.com` |
 | `VITE_SITE_NAME` | Company name for SEO and branding | `Odernix Nigeria Limited` |
 | `VITE_SITE_DESCRIPTION` | SEO meta description | `Leading Nigerian engineering company...` |
-| `VITE_PHONE_NUMBER` | Primary contact phone number | `+2347034900069` |
+| `VITE_PHONE_NUMBER` | Primary contact phone number | `+2349128999972` |
 | `VITE_EMAIL` | Primary contact email | `info@odernix.com` |
 | `VITE_ODERNIX_HOMES_URL` | Subsidiary website URL | `https://www.odernixhomes.com` |
 
