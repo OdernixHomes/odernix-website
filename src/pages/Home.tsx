@@ -364,7 +364,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Founded on December 28, 2016 (RC: 1382295), Odernix Nigeria Limited, headquartered in Abuja, 
                 leads in engineering, energy, and supply services. Through Odernix Homes, we excel in real estate, 
-                with a global network including  Nigeria, the UK, and Canada.
+                with a global network including  Nigeria,UK, and Canada.
               </p>
               <Link
                 to="/about"
