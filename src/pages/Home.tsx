@@ -40,7 +40,7 @@ const Home = () => {
       image: "../energy/energy1.jpg"
     },
     {
-      title: "Oil & Gas Mastery",
+      title: "Oil & Gas",
       subtitle: "Drilling, pipelines, and marine support with precision.",
       cta: "Discover Oil & Gas",
       ctaLink: "/services",
@@ -66,14 +66,14 @@ const Home = () => {
       cta: "Explore Our Services",
       ctaLink: "/services",
       image: "/home-page-background.jpg"
-    },
-    {
+    }
+    /* {
       title: "NDT Excellence & Quality Assurance",
       subtitle: "Advanced non-destructive testing for structural integrity and safety across all industries.",
       cta: "Learn More",
       ctaLink: "/services",
       image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
-    }
+    } */
    
   ];
 
@@ -89,20 +89,20 @@ const Home = () => {
       icon: "⚡"
     },
     {
-      title: "Oil and Gas Drilling & Exploration",
+      title: "Oil and Gas Services",
       description: "Comprehensive services from upstream exploration to downstream distribution with marine support.",
       icon: "🛢️"
     },
     {
-      title: "Supplies – Medical and Office",
+      title: "General Supplies – Medical and Office",
       description: "Timely delivery of medical, office, oilfield materials with NDT services and advanced logistics.",
       icon: "📦"
     },
-    {
+/*     {
       title: "NDT (Non-Destructive Testing)",
       description: "Comprehensive testing services ensuring structural integrity and safety compliance across oil & gas, construction, and marine sectors.",
       icon: "🔍"
-    },
+    }, */
     {
       title: "Real Estate & Residential Construction",
       description: `Odernix Homes builds luxury homes – Visit ${import.meta.env.VITE_ODERNIX_HOMES_URL || "https://www.odernixhomes.com"}`,

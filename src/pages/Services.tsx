@@ -10,7 +10,7 @@ const Services = () => {
   const services = [
     {
       id: 0,
-      title: "Construction & Procurement Engineering",
+      title: "Engineering & Construction Procurement",
       icon: <Building className="w-8 h-8" />,
       description: "We provide end-to-end construction, marine, and procurement solutions, integrating advanced project management and digital tools to ensure efficiency, safety, and quality across all phases.",
       subServices: [
@@ -37,7 +37,7 @@ const Services = () => {
     },
     {
       id: 1,
-      title: "Energy",
+      title: "Energy Solutions",
       icon: <Zap className="w-8 h-8" />,
       description: "Our energy division offers sustainable power generation, distribution, and digital solutions, aligning with global decarbonization goals and client-specific needs.",
       subServices: [
@@ -66,7 +66,7 @@ const Services = () => {
     },
     {
       id: 2,
-      title: "Oil and Gas Drilling & Exploration",
+      title: "Oil and Gas Services",
       icon: <Droplets className="w-8 h-8" />,
       description: "We deliver comprehensive oil and gas services, from upstream exploration to downstream distribution, with marine support and digital innovations to optimize operations.",
       subServices: [
@@ -89,7 +89,7 @@ const Services = () => {
     },
     {
       id: 3,
-      title: "Supplies – Medical and Office",
+      title: " General Supplies",
       icon: <Package className="w-8 h-8" />,
       description: "Our supply division ensures timely delivery of medical, office, oilfield, and agricultural materials, optimized through advanced logistics and procurement strategies.",
       subServices: [
@@ -127,7 +127,7 @@ const Services = () => {
       ],
       feature: "Self-service portal for order tracking"
     },
-    {
+    /* {
       id: 4,
       title: "NDT (Non-Destructive Testing)",
       icon: <Search className="w-8 h-8" />,
@@ -150,10 +150,10 @@ const Services = () => {
         "Phased Array Ultrasonic Testing (PAUT) - Advanced flaw sizing and characterization"
       ],
       feature: "ASNT Level II/III certified technicians with digital reporting and 3D flaw mapping"
-    },
+    }, */
     {
       id: 5,
-      title: "Real Estate & Residential Construction",
+      title: "Real Estate Development",
       icon: <Home className="w-8 h-8" />,
       description: "Through Odernix Homes, we design and build luxury residential properties with modern amenities and virtual tour options. Visit https://www.odernixhomes.com to explore.",
       subServices: [
@@ -380,93 +380,7 @@ const Services = () => {
       </section>
 
       {/* NDT Services Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 relative bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/background.jpg")' }}
-      >
-        <div className="absolute inset-0 bg-blue-50/80"></div>
-        <div className="relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="text-blue-600">
-                  {ndtServices.icon}
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  {ndtServices.title}
-                </h2>
-              </div>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                {ndtServices.description}
-              </p>
-            </div>
-
-            {/* NDT Methods Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
-              {ndtServices.methods.map((method, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-xl md:text-2xl font-semibold text-blue-800 mb-4">{method.name}</h3>
-                  <p className="text-gray-600 mb-6 text-base leading-relaxed">{method.description}</p>
-                  <div>
-                    <h4 className="font-medium text-gray-800 mb-2">Applications:</h4>
-                    <ul className="space-y-1">
-                      {method.applications.map((app, appIndex) => (
-                        <li key={appIndex} className="flex items-center space-x-2 text-sm text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
-                          <span>{app}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Certifications and Industries */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our NDT Certifications</h3>
-                <div className="space-y-3">
-                  {ndtServices.certifications.map((cert, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{cert}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Industries We Serve</h3>
-                <div className="space-y-3">
-                  {ndtServices.industries.map((industry, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{industry}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* NDT CTA */}
-            <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Need NDT Inspection Services?</h3>
-                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                  Our certified NDT technicians are ready to ensure your assets meet the highest safety and quality standards.
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-                >
-                  <span>Request NDT Services</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Our Capabilities */}
       <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"
@@ -494,13 +408,13 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl md:text-lg font-semibold text-gray-900 mb-4">{capability.title}</h3>
                 <p className="text-gray-600 text-base md:text-sm mb-6">{capability.description}</p>
-                <Link
+                {/* <Link
                   to="/contact"
                   className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center space-x-1 text-sm"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </Link> */}
               </div>
             ))}
           </div>

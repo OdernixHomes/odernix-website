@@ -154,7 +154,7 @@ const About = () => {
     },
     {
       icon: <Search className="w-12 h-12" />,
-      title: "NDT (Non-Destructive Testing)",
+      title: " (Non-Destructive Testing)",
       subtitle: "Quality Assurance Excellence",
       description: "ASNT certified specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
       services: ["Ultrasonic Testing", "Radiographic Testing", "Magnetic Particle Testing", "Pipeline Integrity Assessment", "Weld Quality Assessment"],
@@ -183,12 +183,12 @@ const About = () => {
       title: "Real Estate Development",
       description: "Through Odernix Homes, we deliver luxury residential projects with modern amenities, sustainable design, and smart home integration.",
       features: ["Luxury Residences", "Smart Home Tech", "Sustainable Design", "Community Planning"]
-    },
-    {
+    }
+ /*    {
       title: "NDT & Quality Assurance",
       description: "Comprehensive non-destructive testing services with ASNT certified technicians ensuring safety, compliance, and structural integrity across all industrial applications.",
       features: ["Ultrasonic Testing", "Radiographic Testing", "Pipeline Integrity", "Weld Assessment"]
-    }
+    } */
   ];
 
   return (

@@ -72,7 +72,7 @@ const Header = () => {
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' },
+    /* { name: 'Blog', path: '/blog' }, */
   ];
 
   const servicesDropdown = [
@@ -80,7 +80,7 @@ const Header = () => {
     { name: 'Energy Solutions', path: '/services#energy' },
     { name: 'Oil & Gas Services', path: '/services#oil-gas' },
     { name: 'Medical & Office Supplies', path: '/services#supplies' },
-    { name: 'NDT (Non-Destructive Testing)', path: '/services#ndt' },
+    /* { name: 'NDT (Non-Destructive Testing)', path: '/services#ndt' }, */
     { name: 'Real Estate & Construction', path: '/services#real-estate' }
   ];
 
@@ -89,7 +89,7 @@ const Header = () => {
     { name: 'Marine Engineering Capabilities', path: '/projects#marine' },
     { name: 'Energy Solutions Portfolio', path: '/projects#energy' },
     { name: 'Oil & Gas Service Readiness', path: '/projects#oil-gas' },
-    { name: 'NDT Inspection Services', path: '/projects#ndt' },
+    /* { name: 'NDT Inspection Services', path: '/projects#ndt' }, */
     { name: 'Global Supply Chain Network', path: '/projects#supply' }
   ];
 
