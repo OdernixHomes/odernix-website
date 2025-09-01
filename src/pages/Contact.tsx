@@ -87,7 +87,7 @@ const Contact = () => {
         phone: formData.phone || 'Not provided',
         service_category: formData.serviceCategory,
         message: formData.message,
-        to_email: 'info@odernix.com', // Where the email will be sent
+        to_name: 'Odernix Team',
         reply_to: formData.email,
         submission_date: new Date().toLocaleString(),
       };
