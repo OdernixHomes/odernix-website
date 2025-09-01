@@ -534,7 +534,7 @@ const Home = () => {
               ]).map((cert, index) => (
                 <div 
                   key={index}
-                  className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-blue-50 transition-all duration-500 w-24 h-16 sm:w-32 sm:h-20 shadow-md hover:shadow-lg group hover-lift border border-gray-100 hover:border-purple-200"
+                  className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-blue-50 transition-all duration-900 w-24 h-16 sm:w-32 sm:h-20 shadow-md hover:shadow-lg group hover-lift border border-gray-100 hover:border-purple-200"
                 >
                   <img 
                     src={cert.src} 

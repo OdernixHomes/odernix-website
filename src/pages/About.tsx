@@ -490,7 +490,7 @@ const About = () => {
               {certifications.concat(certifications).map((cert, index) => (
                 <div 
                   key={index} 
-                  className="flex-shrink-0 mx-6 sm:mx-8 group bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100 w-48 sm:w-56"
+                  className="flex-shrink-0 mx-6 sm:mx-8 group bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg text-center hover:shadow-2xl transition-all duration-900 transform hover:scale-105 border border-gray-100 w-48 sm:w-56"
                 >
                   <div className="flex items-center justify-center h-16 sm:h-20 mb-4 sm:mb-6">
                     <img
