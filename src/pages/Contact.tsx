@@ -174,7 +174,7 @@ const Contact = () => {
       city: "London",
       country: "United Kingdom",
       address: "2 Pelican House, 42 Freshwharf Road Barking, London. IG11 7HH",
-      phone: "+44 (0) 20 XXXX XXXX",
+      phone: "+234(0) 9128 999 972",
       email: "uk@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM GMT",
       type: "International",
@@ -186,7 +186,7 @@ const Contact = () => {
       city: "Toronto",
       country: "Canada",
       address: "Unit 15, 14151 58a Avenue, Surrey B.C., V3X 0L1",
-      phone: "+1 (604) XXX-XXXX",
+      phone: "+234(0) 9128 999 972",
       email: "canada@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM EST",
       type: "International",
@@ -226,8 +226,8 @@ const Contact = () => {
   ];
 
   const serviceCategories = [
-    { value: "construction", label: "Construction & Procurement Engineering", icon: <Building className="w-5 h-5" /> },
-    { value: "energy", label: "Energy Solutions & Power Generation", icon: <Globe className="w-5 h-5" /> },
+    { value: "construction", label: " Engineering Procurement & Construction", icon: <Building className="w-5 h-5" /> },
+    { value: "energy", label: "Energy Solutions", icon: <Globe className="w-5 h-5" /> },
     { value: "oilgas", label: "Oil & Gas Services", icon: <Award className="w-5 h-5" /> },
     { value: "supplies", label: "Supply & Procurement", icon: <Star className="w-5 h-5" /> },
     { value: "realestate", label: "Real Estate & Odernix Homes", icon: <Users className="w-5 h-5" /> },
