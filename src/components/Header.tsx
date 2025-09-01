@@ -76,12 +76,12 @@ const Header = () => {
   ];
 
   const servicesDropdown = [
-    { name: 'Construction & Procurement Engineering', path: '/services#construction' },
+    { name: 'Engineering Procurement & Construction', path: '/services#construction' },
     { name: 'Energy Solutions', path: '/services#energy' },
     { name: 'Oil & Gas Services', path: '/services#oil-gas' },
-    { name: 'Medical & Office Supplies', path: '/services#supplies' },
+    { name: 'General Services & Supplies', path: '/services#supplies' },
     /* { name: 'NDT (Non-Destructive Testing)', path: '/services#ndt' }, */
-    { name: 'Real Estate & Construction', path: '/services#real-estate' }
+    { name: 'Real Estate Development', path: '/services#real-estate' }
   ];
 
   const projectsDropdown = [
