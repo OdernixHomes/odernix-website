@@ -82,7 +82,7 @@ const About = () => {
       country: "Nigeria", 
       address: "Port Harcourt, Rivers State, Nigeria",
       phone: "+234 9128 999 972",
-      email: "portharcourt@odernix.com",
+      email: "info@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination."
     },
@@ -92,7 +92,7 @@ const About = () => {
       country: "Nigeria",
       address: "Enugu, Enugu State, Nigeria",
       phone: "+234 9128 999 972",
-      email: "homes@odernixhomes.com",
+      email: "info@odernixhomes.com",
       hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
       description: "Dedicated real estate and residential construction hub serving the Southeast region."
     },
@@ -101,8 +101,8 @@ const About = () => {
       city: "London",
       country: "United Kingdom",
       address: "London, United Kingdom",
-      phone: "+44 (0) 20 XXXX XXXX",
-      email: "uk@odernix.com",
+      phone: "+234 9128 999 972",
+      email: "info@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM GMT",
       description: "International business development, technology partnerships, and European market operations."
     },
@@ -111,8 +111,8 @@ const About = () => {
       city: "Toronto",
       country: "Canada",
       address: "Toronto, Ontario, Canada",
-      phone: "+1 (416) XXX-XXXX",
-      email: "canada@odernix.com",
+      phone: "+234 9128 999 972",
+      email: "info@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM EST",
       description: "North American operations focusing on energy solutions, technology transfer, and strategic partnerships."
     }
