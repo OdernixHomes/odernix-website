@@ -55,7 +55,7 @@ const Projects = () => {
       image: "../oil-gas/oil-and-gas-background2.jpg",
       status: "Available"
     },
-    {
+ /*    {
       title: "NDT Inspection Services",
       year: "Ready",
       category: "NDT Services",
@@ -63,7 +63,7 @@ const Projects = () => {
       description: "ASNT certified NDT technicians ready for comprehensive inspection services across all industries with advanced equipment.",
       image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop",
       status: "Available"
-    },
+    }, */
     {
       title: "Global Supply Chain Network",
       year: "Ready",

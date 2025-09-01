@@ -124,8 +124,8 @@ const About = () => {
       icon: <Building2 className="w-12 h-12" />,
       title: "Engineering & Construction",
       subtitle: "Infrastructure Excellence",
-      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with NDT quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
-      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "NDT Inspection Services", "Infrastructure Development", "Offshore Platforms"],
+      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
+      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "Infrastructure Development", "Offshore Platforms"],
       stats: "Ready to Deliver Excellence"
     },
     {
@@ -152,14 +152,14 @@ const About = () => {
       services: ["Medical Supplies", "Office Equipment", "Oilfield Materials", "Logistics Solutions", "Supply Chain Management"],
       stats: "Global Supply Network"
     },
-    {
+   /*  {
       icon: <Search className="w-12 h-12" />,
       title: " (Non-Destructive Testing)",
       subtitle: "Quality Assurance Excellence",
       description: "ASNT certified specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
       services: ["Ultrasonic Testing", "Radiographic Testing", "Magnetic Particle Testing", "Pipeline Integrity Assessment", "Weld Quality Assessment"],
       stats: "ASNT Level II/III Certified"
-    }
+    } */
   ];
 
 
