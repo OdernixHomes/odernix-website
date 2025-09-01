@@ -20,15 +20,11 @@ const Services = () => {
         "Marine construction (jetty, terminal, offshore platform installations)",
         "EPC services (turnkey execution of oil & gas facilities, power plants, marine terminals with EPCM/QA/QC)",
         "Mechanical & electrical engineering (turbines, layouts, solar with IoT sensors)",
-        "Dredging and coastal reclamation",
-        "Diving/underwater inspection/salvage",
-        "Bunkering, ship chandelling/spare parts/marine repairs",
-        "Special transportation, cabotage, wreck removal",
         "Offshore/inshore haulage, escort security, pipeline protection",
         "Procurement services (oilfield materials, energy tools with supply chain analytics)",
        "General contracts (facility upgrades, pipeline welding, transportation)"
       ],
-      feature: "3D project visualizations, real-time dashboards, and NDT inspection reports"
+      feature: "Infrastructure development in complex projects inclusive of offshore platforms, bridges, roads,railway and urban development"
     },
     {
       id: 1,
@@ -45,11 +41,10 @@ const Services = () => {
         "Energy storage (battery banks, UPS, backup power)",
         "Power plant design/construction (renewable/conventional)",
         "Electrical engineering (load scheduling, solar streetlights)",
-        "Energy equipment procurement with vendor tracking",
         "Digital oilfield technologies (SCADA, remote monitoring, automation)",
         "Smart grid design",
         "Digital platforms (billing software, trading dashboards, apps)",
-        "Digital twins"
+        "Energy audits and efficiency consulting",
       ],
       feature: "Energy audits and carbon footprint reports"
     },
@@ -77,7 +72,7 @@ const Services = () => {
     },
     {
       id: 3,
-      title: " General Supplies",
+      title: " General Services & Supplies",
       icon: <Package className="w-8 h-8" />,
       description: "Our supply division ensures timely delivery of medical, office, oilfield, and agricultural materials, optimized through advanced logistics and procurement strategies.",
       subServices: [
@@ -86,14 +81,13 @@ const Services = () => {
         "One-stop supplier for oilfield/marine materials",
         "Procurement/distribution/logistics",
         "Oilfield materials",
-        "Grant management",
         "Land expansion",
         "Medical/hospitality supplies",
         "Office equipment",
         "Power plant maintenance",
         "Workforce training"
       ],
-      feature: "Self-service portal for order tracking"
+      feature: "Global supply network with international procurement and distribution capabilities"
     },
     /* {
       id: 4,
@@ -319,7 +313,7 @@ const Services = () => {
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 )}
-                {activeTab === 4 && (
+                {/* {activeTab === 4 && (
                   <Link
                     to="/contact"
                     className="inline-flex items-center space-x-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200"
@@ -327,7 +321,7 @@ const Services = () => {
                     <span>Request NDT Services</span>
                     <ArrowRight className="w-5 h-5" />
                   </Link>
-                )}
+                )} */}
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-6">Sub-Services</h3>
