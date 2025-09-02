@@ -14,15 +14,14 @@ const Services = () => {
       icon: <Building className="w-8 h-8" />,
       description: "We provide end-to-end construction, marine, and procurement solutions, integrating advanced project management and digital tools to ensure efficiency, safety, and quality across all phases.",
       subServices: [
-        "Foundation engineering (design and construction for buildings, jetties, offshore platforms with precision piling)",
+        "Foundation engineering (design and construction for buildings, offshore platforms with precision piling)",
         "Civil & structural construction (roads, bridges, railways, earthworks with real-time progress tracking)",
-        "Marine & Offshore Services (offshore logistics support, vessel charter, crew transport, FPSO operations)",
         "Marine construction (jetty, terminal, offshore platform installations)",
         "EPC services (turnkey execution of oil & gas facilities, power plants, marine terminals with EPCM/QA/QC)",
         "Mechanical & electrical engineering (turbines, layouts, solar with IoT sensors)",
         "Offshore/inshore haulage, escort security, pipeline protection",
         "Procurement services (oilfield materials, energy tools with supply chain analytics)",
-       "General contracts (facility upgrades, pipeline welding, transportation)"
+        "General contracts (facility upgrades, pipeline welding, transportation)"
       ],
       feature: "Infrastructure development in complex projects inclusive of offshore platforms, bridges, roads,railway and urban development"
     },
@@ -82,12 +81,12 @@ const Services = () => {
         "Procurement/distribution/logistics",
         "Oilfield materials",
         "Land expansion",
-        "Medical/hospitality supplies",
+        "Agricultural supplies",
         "Office equipment",
         "Power plant maintenance",
         "Workforce training"
       ],
-      feature: "Global supply network with international procurement and distribution capabilities"
+      feature: "Global supply network with procurement and distribution capabilities"
     },
     /* {
       id: 4,
@@ -122,13 +121,12 @@ const Services = () => {
         "Luxury home construction",
         "Residential development",
         "Renovation and remodeling",
-        "Virtual tours and 3D visualization",
         "Sustainable building practices",
         "Smart home integration",
         "Custom architectural design",
         "Project management and consultation"
       ],
-      feature: "Immersive VR tours and sustainability certificates"
+      feature: " Sustainability certificates"
     }
   ];
 
