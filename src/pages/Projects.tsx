@@ -254,7 +254,7 @@ const Projects = () => {
       >
         <div className="absolute inset-0 bg-white/70"></div>
         <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Project Highlights
@@ -265,7 +265,7 @@ const Projects = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center p-8 md:p-10 bg-purple-50 rounded-lg">
-              <div className="text-5xl md:text-4xl font-bold text-purple-600 mb-4">70+</div>
+              <div className="text-5xl md:text-4xl font-bold text-purple-600 mb-4">10+</div>
               <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Projects Delivered</div>
               <p className="text-gray-600 text-base">Successfully completed projects across multiple sectors and countries</p>
             </div>
@@ -289,7 +289,7 @@ const Projects = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-        </div>
+        </div> */}
         </div>
       </section>
 
