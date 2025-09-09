@@ -379,7 +379,7 @@ const Home = () => {
             }`} style={{ transitionDelay: '200ms' }}>
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-teal-500 rounded-lg opacity-20 blur-lg animate-pulse"></div>
               <LazyImage
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                src="/landing-page.jpg"
                 alt="Odernix team and global presence"
                 className="relative rounded-lg shadow-2xl h-80 transform hover:scale-105 transition-transform duration-300"
               />
