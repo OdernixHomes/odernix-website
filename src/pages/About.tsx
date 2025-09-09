@@ -82,7 +82,7 @@ const About = () => {
       country: "Nigeria", 
       address: "Port Harcourt, Rivers State, Nigeria",
       phone: "+234 9128 999 972",
-      email: "info@odernix.com",
+      email: "ph@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination."
     },
@@ -93,7 +93,7 @@ const About = () => {
       address: "Enugu, Enugu State, Nigeria",
       phone: "+234 9128 999 972",
       email: "info@odernixhomes.com",
-      hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       description: "Dedicated real estate and residential construction hub serving the Southeast region."
     },
     {
@@ -101,17 +101,17 @@ const About = () => {
       city: "London",
       country: "United Kingdom",
       address: "London, United Kingdom",
-      phone: "+234 9128 999 972",
-      email: "info@odernix.com",
+    
+      email: "uk@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM GMT",
       description: "International business development, technology partnerships, and European market operations."
     },
     {
       name: "North American Office",
-      city: "Toronto",
+      city: "British Council",
       country: "Canada",
-      address: "Toronto, Ontario, Canada",
-      phone: "+234 9128 999 972",
+      address: "British Council, Canada",
+    
       email: "info@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM EST",
       description: "North American operations focusing on energy solutions, technology transfer, and strategic partnerships."
@@ -547,7 +547,7 @@ const About = () => {
                 
                 <div className="space-y-3 text-gray-600 text-sm">
                   <p className="leading-relaxed"><span className="font-semibold text-gray-800">Address:</span> {location.address}</p>
-                  <p><span className="font-semibold text-gray-800">Phone:</span> {location.phone}</p>
+                  <p><span className="font-semibold text-gray-800"></span> {location.phone}</p>
                   <p><span className="font-semibold text-gray-800">Email:</span> {location.email}</p>
                   <p><span className="font-semibold text-gray-800">Hours:</span> {location.hours}</p>
                 </div>

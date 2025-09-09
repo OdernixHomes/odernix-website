@@ -451,11 +451,8 @@ const Home = () => {
             whyChooseUsSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose Odernix
-            </h2>
-            <p className="text-lg text-purple-100 max-w-3xl mx-auto">
               Trusted by clients across Nigeria and internationally for our commitment to excellence
-            </p>
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
             {whyChooseUs.map((item, index) => (

@@ -151,7 +151,7 @@ const Contact = () => {
       country: "Nigeria",
       address: "No 12 Agip Road, Mile 4 Rumueme, Port Harcourt, Rivers State, Nigeria",
       phone: "+234(0) 9128 999 972",
-      email: "portharcourt@odernix.com",
+      email: "ph@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       type: "Regional Office",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination.",
@@ -161,7 +161,7 @@ const Contact = () => {
       name: "Odernix Enugu",
       city: "Enugu",
       country: "Nigeria",
-      address: "19 IGBARIAM STREET, ACHARA LAYOUT, ENUGU, ENUGU STATE",
+      address: "7 NEWBASI STREET, INDPENDENCE LAYOUT, ENUGU, ENUGU STATE",
       phone: "+234(0) 9128 999 972",
       email: "info@odernix.com",
       hours: "Monday - Saturday: 9:00 AM - 5:00 PM",
@@ -174,7 +174,6 @@ const Contact = () => {
       city: "London",
       country: "United Kingdom",
       address: "2 Pelican House, 42 Freshwharf Road Barking, London. IG11 7HH",
-      phone: "+234(0) 9128 999 972",
       email: "uk@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM GMT",
       type: "International",
@@ -183,10 +182,9 @@ const Contact = () => {
     },
     {
       name: "North American Office",
-      city: "Toronto",
+      city: "British Council",
       country: "Canada",
       address: "Unit 15, 14151 58a Avenue, Surrey B.C., V3X 0L1",
-      phone: "+234(0) 9128 999 972",
       email: "canada@odernix.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM EST",
       type: "International",
@@ -635,12 +633,14 @@ const Contact = () => {
                       <MapPin className="w-4 h-4 text-gray-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-600 leading-relaxed">{office.address}</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                      <a href={`tel:${office.phone.replace(/\D/g, '')}`} className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
-                        {office.phone}
-                      </a>
-                    </div>
+                    {office.phone && (
+                      <div className="flex items-center space-x-3">
+                        <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                        <a href={`tel:${office.phone.replace(/\D/g, '')}`} className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
+                          {office.phone}
+                        </a>
+                      </div>
+                    )}
                     <div className="flex items-center space-x-3">
                       <Mail className="w-4 h-4 text-gray-400 flex-shrink-0" />
                       <a href={`mailto:${office.email}`} className="text-gray-600 hover:text-purple-600 transition-colors font-medium">
