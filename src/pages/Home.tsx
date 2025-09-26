@@ -499,8 +499,10 @@ const Home = () => {
           {/* Continuous Scrolling Marquee */}
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll">
-              {/* First set of certifications */}
+              {/* Certifications */}
               {[
+                { name: 'ISO 9001', src: '/certifications /ISO.jpg' },
+                { name: 'COREN', src: '/certifications /COREN.png' },
                 { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png' },
                 { name: 'BSI Group', src: '/certifications /BSI.png' },
                 { name: 'LEEA', src: '/certifications /LEEA.png' },
@@ -512,9 +514,10 @@ const Home = () => {
                 { name: 'OGTAN', src: '/certifications /OGTAN.png' },
                 { name: 'NNPC', src: '/certifications /NNPC.png' },
                 { name: 'DUNS', src: '/certifications /DUNS.png' },
-                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' },
-                { name: 'ISO', src: '/certifications /ISO.jpg' }
+                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' }
               ].concat([
+                { name: 'ISO 9001', src: '/certifications /ISO.jpg' },
+                { name: 'COREN', src: '/certifications /COREN.png' },
                 { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png' },
                 { name: 'BSI Group', src: '/certifications /BSI.png' },
                 { name: 'LEEA', src: '/certifications /LEEA.png' },
@@ -526,8 +529,7 @@ const Home = () => {
                 { name: 'OGTAN', src: '/certifications /OGTAN.png' },
                 { name: 'NNPC', src: '/certifications /NNPC.png' },
                 { name: 'DUNS', src: '/certifications /DUNS.png' },
-                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' },
-                { name: 'ISO', src: '/certifications /ISO.jpg' }
+                { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png' }
               ]).map((cert, index) => (
                 <div 
                   key={index}
@@ -541,6 +543,62 @@ const Home = () => {
                   />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      {/* Strategic Partners */}
+      <section className="py-16 bg-gray-50 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-gray-50/80"></div>
+        <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Strategic Industry Partners
+            </h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              As a stakeholder in NIPEX (Nigerian Independent Petrochemical and Energy Exhibitors), 
+              ODERNIX is automatically qualified as a vendor to major industry players
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12">
+            {[
+              { name: 'SPDC', fullName: 'Shell Petroleum Development Company', logo: '/partner/shell-logo.jpg' },
+              { name: 'Oando', fullName: 'Oando PLC', logo: '/partner/oando-logo.jpg' },
+              { name: 'Addax', fullName: 'Addax Petroleum', logo: '/partner/addax-petroleum-logo.jpg' },
+              { name: 'Chevron', fullName: 'Chevron Nigeria Limited', logo: '/partner/chevron-logo.jpg' },
+              { name: 'Renaissance', fullName: 'Renaissance', logo: '/partner/Renaissance-logo.jpg' },
+            ].map((partner, index) => (
+              <div 
+                key={index} 
+                className="group text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="h-16 flex items-center justify-center mb-4">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.fullName} logo`}
+                    className="max-h-12 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-sm font-semibold text-gray-700 group-hover:text-purple-600 transition-colors duration-300">
+                  {partner.fullName}
+                </h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="inline-block bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">NIPEX Stakeholder Benefits</h3>
+              <p className="text-gray-600">
+                Through our NIPEX membership, we maintain qualified vendor status with leading oil & gas companies, 
+                ensuring streamlined partnerships and project delivery capabilities across the Nigerian energy sector.
+              </p>
             </div>
           </div>
         </div>

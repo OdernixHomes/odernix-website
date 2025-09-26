@@ -149,12 +149,12 @@ const Contact = () => {
       name: "Port Harcourt Operations",
       city: "Port Harcourt",
       country: "Nigeria",
-      address: "No 12 Agip Road, Mile 4 Rumueme, Port Harcourt, Rivers State, Nigeria",
+      address: "No 12 Agip Road, Mile 4 Rumueme, Port Harcourt, Rivers State, Nigeria | Additional Address: Royal Plaza, Port Harcourt, Rivers State, Nigeria",
       phone: "+234(0) 9128 999 972",
       email: "ph@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
       type: "Regional Office",
-      description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination.",
+      description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination with multiple operational addresses.",
       color: "from-teal-500 to-teal-600"
     },
     {

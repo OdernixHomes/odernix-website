@@ -51,23 +51,27 @@ const Services = () => {
       id: 2,
       title: "Oil and Gas Services",
       icon: <Droplets className="w-8 h-8" />,
-      description: "We deliver comprehensive oil and gas services, from upstream exploration to downstream distribution, with marine support and digital innovations to optimize operations.",
+      description: "We deliver comprehensive oil and gas services, from upstream exploration to downstream distribution, with advanced drilling capabilities, marine support, and digital innovations to optimize operations. Our drilling division offers complete well lifecycle management with cutting-edge technology and safety protocols.",
       subServices: [
-        "Drilling & well completion (casing, cementing, perforation with real-time analytics)",
+        "Advanced Drilling Services - Rotary drilling, directional drilling, horizontal drilling with real-time MWD/LWD systems",
+        "Well Completion & Workover - Casing running, cementing operations, perforation services with hydraulic fracturing support",
+        "Drilling Auxiliary Services - Mud logging, well logging, drilling fluid management, and cementing quality control",
+        "Drilling Equipment Supply - Drill bits, drilling fluids, casing, tubing, and specialized downhole tools",
+        "Well Intervention Services - Coiled tubing operations, wireline services, well stimulation, and production optimization",
+        "Drilling Engineering & Planning - Well design, trajectory planning, drilling program development with risk assessment",
         "Pipeline construction & maintenance (integrity management, pigging with digital twins)",
         "Oil & gas facility construction (refineries, depots, gas plants, LNG with EPCM)",
-        "Independent marketing",
-        "Petroleum sales",
-        "Oil services",
-        "LNG sales",
+        "Marine Support Services - Offshore drilling rig support, crew boat services, supply vessel operations",
+        "HSE & Environmental Compliance - Blowout prevention, well control, oil spill response, waste management",
+        "Independent marketing & petroleum sales",
+        "LNG processing & sales with storage solutions",
         "Petroleum merchants (chemicals/paints/oils)",
-        "Solid minerals exploration",
-        "Crude oil/distribution/storage",
-        "Gas station management",
-        "Upstream/downstream operations",
-        "Environmental compliance (oil spill response, waste treatment)"
+        "Solid minerals exploration & development",
+        "Crude oil distribution, storage & terminal operations",
+        "Gas station management & retail fuel operations",
+        "Upstream/downstream operations integration"
       ],
-      feature: "Risk assessment dashboards and decarbonization roadmaps"
+      feature: "Advanced drilling capabilities with real-time monitoring, digital twins, and comprehensive auxiliary services for complete well lifecycle management"
     },
     {
       id: 3,
@@ -338,8 +342,111 @@ const Services = () => {
         </div>
       </section>
 
-      {/* NDT Services Section */}
-     
+      {/* Drilling Services Case Studies & Testimonials */}
+      {activeTab === 2 && (
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-teal-50 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Drilling Services Excellence
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Proven track record in complex drilling operations across Nigeria's oil & gas sector
+              </p>
+            </div>
+
+            {/* Case Studies */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <Droplets className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Niger Delta Offshore Drilling</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Successfully completed complex offshore drilling operations in challenging Niger Delta conditions, 
+                  utilizing advanced directional drilling technology to reach multiple reservoir targets from a single platform.
+                </p>
+                <div className="border-t pt-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div><strong>Depth:</strong> 12,000 ft</div>
+                    <div><strong>Duration:</strong> 45 days</div>
+                    <div><strong>Technology:</strong> MWD/LWD</div>
+                    <div><strong>Safety:</strong> Zero incidents</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 p-3 rounded-full mr-4">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Onshore Development Wells</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Delivered comprehensive drilling and completion services for major international oil company's 
+                  onshore development program, achieving exceptional drilling efficiency and wellbore quality.
+                </p>
+                <div className="border-t pt-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div><strong>Wells:</strong> 15 wells</div>
+                    <div><strong>Efficiency:</strong> +25% vs plan</div>
+                    <div><strong>Quality:</strong> 100% success rate</div>
+                    <div><strong>Client:</strong> International IOC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Client Testimonials */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Client Testimonials</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-50 p-6 rounded-lg mb-4">
+                    <p className="text-gray-700 italic">
+                      "Odernix demonstrated exceptional drilling expertise and safety standards during our offshore campaign. 
+                      Their real-time monitoring and proactive approach ensured zero NPT and excellent wellbore quality."
+                    </p>
+                  </div>
+                  <div className="font-semibold text-gray-900">Operations Manager</div>
+                  <div className="text-gray-600 text-sm">Major International Oil Company</div>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-teal-50 p-6 rounded-lg mb-4">
+                    <p className="text-gray-700 italic">
+                      "The drilling auxiliary services provided by Odernix exceeded our expectations. Their mud logging and 
+                      cementing quality control capabilities are world-class, delivering results on time and within budget."
+                    </p>
+                  </div>
+                  <div className="font-semibold text-gray-900">Drilling Engineer</div>
+                  <div className="text-gray-600 text-sm">Nigerian National Oil Company</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Drilling Services CTA */}
+            <div className="text-center mt-12">
+              <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Ready to Discuss Your Drilling Project?</h3>
+                <p className="text-blue-100 mb-6">
+                  Our drilling specialists are ready to provide comprehensive solutions for your next project
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <span>Request Drilling Services Quote</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Our Capabilities */}
       <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"

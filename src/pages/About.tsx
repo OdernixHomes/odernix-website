@@ -50,6 +50,8 @@ const About = () => {
   ];
 
   const certifications = [
+    { name: 'ISO 9001', src: '/certifications /ISO.jpg', description: 'ISO 9001 Quality Management System - Commitment to Quality and Industry Standards' },
+    { name: 'COREN', src: '/certifications /COREN.png', description: 'Council for the Regulation of Engineering in Nigeria - Professional Engineering Standards' },
     { name: 'QMS Registered', src: '/certifications /QMS REGISTERED.png', description: 'ISO Quality Management System Certification for Superior Service Delivery' },
     { name: 'BSI Group', src: '/certifications /BSI.png', description: 'British Standards Institution Global Accreditation and Quality Assurance' },
     { name: 'LEEA', src: '/certifications /LEEA.png', description: 'Lifting Equipment Engineers Association - Marine & Offshore Excellence' },
@@ -61,8 +63,7 @@ const About = () => {
     { name: 'OGTAN', src: '/certifications /OGTAN.png', description: 'Oil and Gas Trainers Association of Nigeria - Professional Development' },
     { name: 'NNPC', src: '/certifications /NNPC.png', description: 'Nigerian National Petroleum Corporation - Trusted Strategic Partner' },
     { name: 'DUNS', src: '/certifications /DUNS.png', description: 'Dun & Bradstreet Number - Global Business Identity Verification' },
-    { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png', description: 'Nord-Lock Group Partnership - Advanced Fastening Solutions' },
-    { name: 'ISO', src: '/certifications /ISO.jpg', description: 'International Organization for Standardization - Quality Management Certification' }
+    { name: 'NORD-LOCK', src: '/certifications /NORD-LOCK.png', description: 'Nord-Lock Group Partnership - Advanced Fastening Solutions' }
   ];
 
   const locations = [
@@ -80,7 +81,7 @@ const About = () => {
       name: "Port Harcourt Operations",
       city: "Port Harcourt",
       country: "Nigeria", 
-      address: "Port Harcourt, Rivers State, Nigeria",
+      address: "Royal Plaza, Port Harcourt, Rivers State, Nigeria",
       phone: "+234 9128 999 972",
       email: "ph@odernix.com",
       hours: "Monday - Friday: 8:00 AM - 6:00 PM",
@@ -506,6 +507,175 @@ const About = () => {
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{cert.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Policies */}
+      <section className="py-32 relative bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+              Company Policies
+            </h2>
+            <div className="w-32 h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-10"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light">
+              Our commitment to excellence is guided by comprehensive policies that ensure safety, quality, 
+              and sustainable development across all operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* HSE Policy */}
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-500">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-full mr-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900">HSE Policy</h3>
+              </div>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  <strong>Health, Safety & Environmental Excellence:</strong> We are committed to maintaining the highest standards 
+                  of health, safety, and environmental protection in all our operations.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                    <span>Zero harm workplace culture with comprehensive safety training programs</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                    <span>Environmental impact assessments and mitigation strategies for all projects</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                    <span>Regular safety audits and continuous improvement initiatives</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                    <span>Compliance with international HSE standards and local regulations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* QA/QC Policy */}
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-500">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-4 rounded-full mr-4">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900">QA/QC Policy</h3>
+              </div>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  <strong>Quality Assurance & Quality Control:</strong> We maintain rigorous quality management systems 
+                  to ensure superior project delivery and client satisfaction.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                    <span>ISO 9001 certified quality management system implementation</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                    <span>Comprehensive testing and inspection protocols at every project phase</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                    <span>Continuous monitoring and improvement of quality processes</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                    <span>Third-party quality audits and certification compliance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Local Content Policy */}
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-500">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-full mr-4">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900">Local Content Policy</h3>
+              </div>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  <strong>Nigerian Content Development:</strong> We are committed to maximizing local content utilization 
+                  and contributing to Nigeria's economic development through our operations.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                    <span>Priority procurement from Nigerian suppliers and service providers</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                    <span>Local workforce development and technical skills training programs</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                    <span>Technology transfer and knowledge sharing with local partners</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                    <span>NCDMB compliance and reporting for all oil & gas projects</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Community Affairs/Security Policy */}
+            <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-500">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-4 rounded-full mr-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900">Community Affairs & Security</h3>
+              </div>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  <strong>Community Partnership & Security:</strong> We foster positive relationships with local communities 
+                  while maintaining robust security protocols to ensure safe operations.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" />
+                    <span>Community engagement and stakeholder consultation for all projects</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" />
+                    <span>Local employment opportunities and community development initiatives</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" />
+                    <span>Comprehensive security risk assessments and mitigation strategies</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" />
+                    <span>Emergency response procedures and crisis management protocols</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Policy Commitment Statement */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-teal-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Our Policy Commitment</h3>
+              <p className="text-lg text-purple-100 max-w-4xl mx-auto">
+                These policies are not just documents—they represent our unwavering commitment to operational excellence, 
+                sustainable development, and positive impact on the communities we serve. Every team member is trained 
+                and accountable for upholding these standards in their daily work.
+              </p>
             </div>
           </div>
         </div>
