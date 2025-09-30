@@ -33,7 +33,7 @@ const Projects = () => {
       projectSign: "Bastion Phase - Smart Living"
     },
     // Nigerian Construction Projects
-    {
+    /* {
       title: " Infrastructure Development",
       year: "2023",
       category: "Construction",
@@ -65,7 +65,7 @@ const Projects = () => {
       status: "Completed",
       type: "Nigerian",
       projectSign: "FCT Commercial Development - Built by Odernix"
-    },
+    }, */
     // International Case Studies & Capabilities
     {
       title: "UK Energy Infrastructure Case Study",
@@ -358,7 +358,7 @@ const Projects = () => {
       </section>
 
       {/* Before & After Construction Gallery */}
-      <section className="py-20 bg-white relative">
+      {/* <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -369,9 +369,9 @@ const Projects = () => {
             </p>
           </div>
           
-          <div className="space-y-16">
+          <div className="space-y-16"> */}
             {/*  Infrastructure Project */}
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12">
+            {/* <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Infrastructure Development</h3>
                 <p className="text-gray-600">Major urban infrastructure transformation in Lagos State</p>
@@ -401,10 +401,10 @@ const Projects = () => {
                 </div>
               </div>
               
-            </div>
+            </div> */}
 
             {/* Industrial Complex */}
-            <div className="bg-gradient-to-r from-teal-50 to-green-50 rounded-2xl p-8 md:p-12">
+           {/*  <div className="bg-gradient-to-r from-teal-50 to-green-50 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Industrial Complex</h3>
                 <p className="text-gray-600">Advanced industrial facility development in Rivers State</p>
@@ -455,10 +455,10 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Construction Services CTA */}
-          <div className="text-center mt-16">
+          {/* <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-purple-600 to-teal-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Vision?</h3>
               <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
@@ -474,8 +474,8 @@ const Projects = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </div> 
+      </section>*/}
 
       {/* Project Highlights */}
       <section className="py-20 bg-white relative bg-cover bg-center bg-fixed"
