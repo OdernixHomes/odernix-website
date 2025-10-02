@@ -10,7 +10,6 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Blog from './pages/Blog';
 import Careers from './pages/Careers';
 import { useAnalytics } from './hooks/useAnalytics';
 

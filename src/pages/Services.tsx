@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle, Search } from 'lucide-react';
+import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle, Drill, TestTube } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Services = () => {
@@ -51,7 +51,29 @@ const Services = () => {
       id: 2,
       title: "Oil and Gas Services",
       icon: <Droplets className="w-8 h-8" />,
-      description: "We deliver comprehensive oil and gas services, from upstream exploration to downstream distribution, with advanced drilling capabilities, marine support, and digital innovations to optimize operations. Our drilling division offers complete well lifecycle management with cutting-edge technology and safety protocols.",
+      description: "We deliver comprehensive oil and gas services, from upstream exploration to downstream distribution, with marine support, and digital innovations to optimize operations across the entire value chain.",
+      subServices: [
+        "Pipeline construction & maintenance (integrity management, pigging with digital twins)",
+        "Oil & gas facility construction (refineries, depots, gas plants, LNG with EPCM)",
+        "Marine Support Services - Offshore rig support, crew boat services, supply vessel operations",
+        "HSE & Environmental Compliance - Oil spill response, waste management, safety protocols",
+        "Independent marketing & petroleum sales",
+        "LNG processing & sales with storage solutions",
+        "Petroleum merchants (chemicals/paints/oils)",
+        "Solid minerals exploration & development",
+        "Crude oil distribution, storage & terminal operations",
+        "Gas station management & retail fuel operations",
+        "Upstream/downstream operations integration",
+        "Process engineering and optimization",
+        "Facility maintenance and turnaround services"
+      ],
+      feature: "Comprehensive oil & gas value chain services with digital monitoring and environmental compliance"
+    },
+    {
+      id: 3,
+      title: "Drilling Services",
+      icon: <Drill className="w-8 h-8" />,
+      description: "Our specialized drilling division offers complete well lifecycle management with cutting-edge technology, advanced drilling capabilities, and comprehensive safety protocols for onshore and offshore operations.",
       subServices: [
         "Advanced Drilling Services - Rotary drilling, directional drilling, horizontal drilling with real-time MWD/LWD systems",
         "Well Completion & Workover - Casing running, cementing operations, perforation services with hydraulic fracturing support",
@@ -59,23 +81,42 @@ const Services = () => {
         "Drilling Equipment Supply - Drill bits, drilling fluids, casing, tubing, and specialized downhole tools",
         "Well Intervention Services - Coiled tubing operations, wireline services, well stimulation, and production optimization",
         "Drilling Engineering & Planning - Well design, trajectory planning, drilling program development with risk assessment",
-        "Pipeline construction & maintenance (integrity management, pigging with digital twins)",
-        "Oil & gas facility construction (refineries, depots, gas plants, LNG with EPCM)",
-        "Marine Support Services - Offshore drilling rig support, crew boat services, supply vessel operations",
-        "HSE & Environmental Compliance - Blowout prevention, well control, oil spill response, waste management",
-        "Independent marketing & petroleum sales",
-        "LNG processing & sales with storage solutions",
-        "Petroleum merchants (chemicals/paints/oils)",
-        "Solid minerals exploration & development",
-        "Crude oil distribution, storage & terminal operations",
-        "Gas station management & retail fuel operations",
-        "Upstream/downstream operations integration"
+        "Offshore Drilling Support - Platform drilling, subsea operations, marine logistics coordination",
+        "Drilling Safety & HSE - Blowout prevention, well control training, emergency response procedures",
+        "Real-time Drilling Monitoring - Advanced telemetry, downhole sensors, automated drilling systems",
+        "Drilling Performance Optimization - Rate of penetration enhancement, drilling efficiency analysis",
+        "Wellbore Quality Assurance - Trajectory control, formation evaluation, completion readiness",
+        "Drilling Waste Management - Cuttings treatment, fluid recycling, environmental compliance"
       ],
       feature: "Advanced drilling capabilities with real-time monitoring, digital twins, and comprehensive auxiliary services for complete well lifecycle management"
     },
     {
-      id: 3,
-      title: " General Services & Supplies",
+      id: 4,
+      title: "Non-Destructive Testing (NDT)",
+      icon: <TestTube className="w-8 h-8" />,
+      description: "Our ISO-certified NDT specialists provide comprehensive non-destructive testing services to ensure structural integrity, safety compliance, and quality assurance across oil & gas, construction, and marine industries without damaging tested materials.",
+      subServices: [
+        "Ultrasonic Testing (UT) - Weld inspection, thickness measurement, flaw detection with advanced phased array technology",
+        "Radiographic Testing (RT) - X-ray and gamma-ray imaging for internal defect detection in welds and castings",
+        "Magnetic Particle Testing (MT) - Surface crack detection in ferromagnetic materials with fluorescent techniques",
+        "Liquid Penetrant Testing (PT) - Surface discontinuity detection in non-porous materials",
+        "Visual Testing (VT) - Surface condition and structural assessment with optical aids and digital documentation",
+        "Eddy Current Testing (ECT) - Conductivity measurement and coating thickness analysis",
+        "Pipeline Integrity Assessment - In-line inspection, corrosion mapping, and fitness-for-service evaluation",
+        "Pressure Vessel Testing - Code compliance verification and safety assessment",
+        "Storage Tank Floor Scanning - Bottom plate thickness measurement and corrosion detection",
+        "Structural Steel Inspection - Building and bridge component testing with detailed reporting",
+        "Marine Structure Testing - Offshore platform and vessel hull inspection",
+        "Weld Quality Assessment - Pre-service and in-service weld evaluation with digital records",
+        "Corrosion Monitoring - Real-time asset condition assessment and predictive maintenance",
+        "Digital Radiography - Advanced imaging with immediate results and 3D flaw mapping",
+        "Phased Array Ultrasonic Testing (PAUT) - Advanced flaw sizing and characterization"
+      ],
+      feature: "ISO-certified ASNT Level II/III technicians with digital reporting, 3D flaw mapping, and comprehensive industry compliance"
+    },
+    {
+      id: 5,
+      title: "General Services & Supplies",
       icon: <Package className="w-8 h-8" />,
       description: "Our supply division ensures timely delivery of medical, office, oilfield, and agricultural materials, optimized through advanced logistics and procurement strategies.",
       subServices: [
@@ -92,32 +133,8 @@ const Services = () => {
       ],
       feature: "Global supply network with procurement and distribution capabilities"
     },
-    /* {
-      id: 4,
-      title: "NDT (Non-Destructive Testing)",
-      icon: <Search className="w-8 h-8" />,
-      description: "Our certified NDT specialists provide comprehensive non-destructive testing services to ensure structural integrity, safety, and quality assurance across oil & gas, construction, and marine industries.",
-      subServices: [
-        "Ultrasonic Testing (UT) - Weld inspection, thickness measurement, flaw detection",
-        "Radiographic Testing (RT) - Internal defect detection in welds and castings",
-        "Magnetic Particle Testing (MT) - Surface crack detection in ferromagnetic materials",
-        "Liquid Penetrant Testing (PT) - Surface discontinuity detection",
-        "Visual Testing (VT) - Surface condition and structural assessment",
-        "Eddy Current Testing (ECT) - Conductivity and coating thickness measurement",
-        "Pipeline Integrity Assessment - In-line inspection and corrosion mapping",
-        "Pressure Vessel Testing - Code compliance and safety verification",
-        "Storage Tank Floor Scanning - Bottom plate thickness and corrosion detection",
-        "Structural Steel Inspection - Building and bridge component testing",
-        "Marine Structure Testing - Offshore platform and vessel hull inspection",
-        "Weld Quality Assessment - Pre-service and in-service weld evaluation",
-        "Corrosion Monitoring - Real-time asset condition assessment",
-        "Digital Radiography - Advanced imaging with immediate results",
-        "Phased Array Ultrasonic Testing (PAUT) - Advanced flaw sizing and characterization"
-      ],
-      feature: "ASNT Level II/III certified technicians with digital reporting and 3D flaw mapping"
-    }, */
     {
-      id: 5,
+      id: 6,
       title: "Real Estate Development",
       icon: <Home className="w-8 h-8" />,
       description: "Through Odernix Homes, we design and build luxury residential properties with modern amenities and virtual tour options. Visit https://www.odernixhomes.com to explore.",
@@ -130,7 +147,7 @@ const Services = () => {
         "Custom architectural design",
         "Project management and consultation"
       ],
-      feature: " Sustainability certificates"
+      feature: "Sustainability certificates"
     }
   ];
 
@@ -188,10 +205,12 @@ const Services = () => {
   };
 
   const capabilities = [
-    { title: "Advanced NDT Services", category: "Quality Assurance", description: "ASNT certified technicians ready for comprehensive inspection services", icon: "🔍" },
+    { title: "ISO-Certified NDT Services", category: "Quality Assurance", description: "ASNT Level II/III certified technicians with advanced testing capabilities", icon: "🔍" },
+    { title: "Advanced Drilling Operations", category: "Oil & Gas", description: "Complete well lifecycle management with real-time monitoring", icon: "⛽" },
     { title: "Digital Engineering Solutions", category: "Technology", description: "3D modeling, IoT monitoring, and digital twin capabilities", icon: "💻" },
     { title: "Sustainable Energy Systems", category: "Green Technology", description: "Solar, smart grid, and energy storage solution expertise", icon: "⚡" },
-    { title: "Global Supply Network", category: "Logistics", description: "International procurement and distribution capabilities", icon: "🌍" }
+    { title: "Global Supply Network", category: "Logistics", description: "International procurement and distribution capabilities", icon: "🌍" },
+    { title: "EPC Project Management", category: "Construction", description: "End-to-end engineering, procurement and construction solutions", icon: "🏗️" }
   ];
 
   return (
@@ -304,7 +323,7 @@ const Services = () => {
                   <h3 className="text-lg font-semibold text-teal-800 mb-2">Special Feature</h3>
                   <p className="text-teal-700">{services[activeTab].feature}</p>
                 </div>
-                {activeTab === 5 && (
+                {activeTab === 6 && (
                   <a
                     href="https://www.odernixhomes.com"
                     target="_blank"
@@ -343,7 +362,7 @@ const Services = () => {
       </section>
 
       {/* Drilling Services Case Studies & Testimonials */}
-      {activeTab === 2 && (
+      {activeTab === 3 && (
         <section className="py-16 bg-gradient-to-br from-blue-50 to-teal-50 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -448,6 +467,98 @@ const Services = () => {
         </section>
       )}
 
+      {/* NDT Services Detailed Section */}
+      {activeTab === 4 && (
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                ISO-Certified NDT Excellence
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Comprehensive non-destructive testing services ensuring structural integrity and safety compliance across industries
+              </p>
+            </div>
+
+            {/* NDT Methods Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {ndtServices.methods.map((method, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 p-3 rounded-full mr-4">
+                      <TestTube className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900">{method.name}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4 text-sm">{method.description}</p>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 text-sm">Applications:</h4>
+                    <ul className="space-y-1">
+                      {method.applications.map((app, appIndex) => (
+                        <li key={appIndex} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600 text-xs">{app}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Certifications & Industries */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                  Certifications & Standards
+                </h3>
+                <div className="space-y-3">
+                  {ndtServices.certifications.map((cert, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600 text-sm">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Building className="w-6 h-6 text-purple-500 mr-3" />
+                  Industries Served
+                </h3>
+                <div className="space-y-3">
+                  {ndtServices.industries.map((industry, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600 text-sm">{industry}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* NDT Services CTA */}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-gray-600 to-blue-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Need Professional NDT Services?</h3>
+                <p className="text-gray-100 mb-6">
+                  Our ISO-certified specialists are ready to provide comprehensive testing solutions for your project
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center space-x-2 bg-white text-gray-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <span>Request NDT Services Quote</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Our Capabilities */}
       <section className="py-20 bg-gray-50 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url("/background.jpg")' }}
@@ -463,7 +574,7 @@ const Services = () => {
               Ready-to-deploy expertise and cutting-edge solutions across all engineering disciplines
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 text-center">
                 <div className="text-5xl md:text-4xl mb-6">{capability.icon}</div>

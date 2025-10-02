@@ -106,11 +106,33 @@ const Projects = () => {
       year: "Ready",
       category: "Oil & Gas",
       location: "Nigeria & West Africa",
-      description: "Comprehensive drilling support, pipeline integrity, FPSO operations, and offshore logistics services with certified expertise for Nigerian oil sector.",
+      description: "Comprehensive pipeline construction, facility development, FPSO operations, and offshore logistics services with certified expertise for Nigerian oil sector.",
       image: "../oil-gas/oil-and-gas-background2.jpg",
       status: "Available",
       type: "Nigerian",
       projectSign: "Nigeria Oil & Gas Services - Odernix Petroleum Division"
+    },
+    {
+      title: "Advanced Drilling Operations Portfolio",
+      year: "Ready",
+      category: "Drilling Services",
+      location: "Nigeria & West Africa",
+      description: "Specialized drilling services including rotary drilling, directional drilling, well completion, and real-time monitoring with cutting-edge technology and safety protocols.",
+      image: "../drilling/drilling2.jpg",
+      status: "Available",
+      type: "Nigerian",
+      projectSign: "Advanced Drilling Services - Odernix Drilling Division"
+    },
+    {
+      title: "ISO-Certified NDT Inspection Services",
+      year: "Ready",
+      category: "NDT Services",
+      location: "Nigeria & International",
+      description: "Comprehensive non-destructive testing services including ultrasonic, radiographic, and magnetic particle testing with ISO-certified ASNT Level II/III technicians.",
+      image: "../ndt/ndt.jpg",
+      status: "Available",
+      type: "Nigerian",
+      projectSign: "NDT Quality Assurance - Odernix Testing Division"
     },
     // International Capabilities Study
     {
@@ -126,7 +148,7 @@ const Projects = () => {
     }
   ];
 
-  const categories = ['All', 'Real Estate', 'Marine Engineering', 'Energy', 'Oil & Gas', 'NDT Services', 'Supply & Logistics', 'Construction'];
+  const categories = ['All', 'Real Estate', 'Marine Engineering', 'Energy', 'Oil & Gas', 'Drilling Services', 'NDT Services', 'Supply & Logistics', 'Construction'];
   const projectTypes = ['All', 'Nigerian', 'International'];
 
   const filteredProjects = projects.filter(project => {

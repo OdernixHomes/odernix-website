@@ -79,8 +79,9 @@ const Header = () => {
     { name: 'Engineering Procurement & Construction', path: '/services#construction' },
     { name: 'Energy Solutions', path: '/services#energy' },
     { name: 'Oil & Gas Services', path: '/services#oil-gas' },
+    { name: 'Drilling Services', path: '/services#drilling' },
+    { name: 'Non-Destructive Testing (NDT)', path: '/services#ndt' },
     { name: 'General Services & Supplies', path: '/services#supplies' },
-    /* { name: 'NDT (Non-Destructive Testing)', path: '/services#ndt' }, */
     { name: 'Real Estate Development', path: '/services#real-estate' }
   ];
 
@@ -89,7 +90,8 @@ const Header = () => {
     { name: 'Marine Engineering Capabilities', path: '/projects#marine' },
     { name: 'Energy Solutions Portfolio', path: '/projects#energy' },
     { name: 'Oil & Gas Service Readiness', path: '/projects#oil-gas' },
-    /* { name: 'NDT Inspection Services', path: '/projects#ndt' }, */
+    { name: 'Drilling Operations Portfolio', path: '/projects#drilling' },
+    { name: 'NDT Inspection Services', path: '/projects#ndt' },
     { name: 'Global Supply Chain Network', path: '/projects#supply' }
   ];
 

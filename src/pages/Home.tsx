@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, CheckCircle, Award, Lightbulb, Leaf, Heart, ExternalLink, TrendingUp, Users, Zap } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, CheckCircle, Award, Lightbulb, Leaf, Heart, ExternalLink } from 'lucide-react';
 import LazyImage from '../components/LazyImage';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { useCountAnimation } from '../hooks/useCountAnimation';
+// import { useCountAnimation } from '../hooks/useCountAnimation';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,12 +16,12 @@ const Home = () => {
   const aboutSection = useIntersectionObserver();
   const servicesSection = useIntersectionObserver();
   const whyChooseUsSection = useIntersectionObserver();
-  const statsSection = useIntersectionObserver();
+  // const statsSection = useIntersectionObserver();
   
-  // Animated counters
-  const certificationsCount = useCountAnimation(13, 2000, statsSection.isVisible);
-  const serviceAreaCount = useCountAnimation(6, 2000, statsSection.isVisible);
-  const yearsCount = useCountAnimation(9, 1500, statsSection.isVisible);
+  // Animated counters (commented out as not currently used in the component)
+  // const certificationsCount = useCountAnimation(13, 2000, statsSection.isVisible);
+  // const serviceAreaCount = useCountAnimation(6, 2000, statsSection.isVisible);
+  // const yearsCount = useCountAnimation(9, 1500, statsSection.isVisible);
 
   const heroSlides = [
      {
@@ -41,10 +41,17 @@ const Home = () => {
     },
     {
       title: "Oil & Gas",
-      subtitle: "Drilling, pipelines, and marine support with precision.",
+      subtitle: "Pipeline construction, facility development, and marine support with precision.",
       cta: "Discover Oil & Gas",
       ctaLink: "/services",
       image: "../oil-gas/oil-and-gas-background.jpg"
+    },
+    {
+      title: "Advanced Drilling Services",
+      subtitle: "Complete well lifecycle management with cutting-edge technology and real-time monitoring.",
+      cta: "Learn About Drilling",
+      ctaLink: "/services",
+      image: "../drilling/drilling.jpeg"
     },
     {
       title: "Global Supply Expertise",
@@ -66,14 +73,14 @@ const Home = () => {
       cta: "Explore Our Services",
       ctaLink: "/services",
       image: "/home-page-background.jpg"
-    }
-    /* {
-      title: "NDT Excellence & Quality Assurance",
+    },
+    {
+      title: "ISO-Certified NDT Excellence",
       subtitle: "Advanced non-destructive testing for structural integrity and safety across all industries.",
-      cta: "Learn More",
+      cta: "Discover NDT Services",
       ctaLink: "/services",
-      image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop"
-    } */
+      image: "../ndt/ndt2.jpg"
+    }
    
   ];
 
@@ -84,28 +91,33 @@ const Home = () => {
       icon: "🏗️"
     },
     {
-      title: "Energy",
+      title: "Energy Solutions",
       description: "Sustainable power generation, distribution, and digital solutions for decarbonization goals.",
       icon: "⚡"
     },
     {
       title: "Oil and Gas Services",
-      description: "Comprehensive services from upstream exploration to downstream distribution with marine support.",
+      description: "Comprehensive pipeline, facility construction, and marine support services across the value chain.",
       icon: "🛢️"
     },
     {
-      title: "General Supplies – Medical and Office",
-      description: "Timely delivery of medical, office, oilfield materials with NDT services and advanced logistics.",
+      title: "Drilling Services",
+      description: "Advanced drilling operations with real-time monitoring, well completion, and lifecycle management.",
+      icon: "⛽"
+    },
+    {
+      title: "NDT (Non-Destructive Testing)",
+      description: "ISO-certified testing services ensuring structural integrity and safety compliance across all industries.",
+      icon: "🔍"
+    },
+    {
+      title: "General Supplies & Logistics",
+      description: "Timely delivery of medical, office, and oilfield materials with advanced logistics and procurement.",
       icon: "📦"
     },
-/*     {
-      title: "NDT (Non-Destructive Testing)",
-      description: "Comprehensive testing services ensuring structural integrity and safety compliance across oil & gas, construction, and marine sectors.",
-      icon: "🔍"
-    }, */
     {
-      title: "Real Estate & Residential Construction",
-      description: `Odernix Homes builds luxury homes – Visit ${import.meta.env.VITE_ODERNIX_HOMES_URL || "https://www.odernixhomes.com"}`,
+      title: "Real Estate Development",
+      description: `Odernix Homes builds luxury residential properties – Visit ${import.meta.env.VITE_ODERNIX_HOMES_URL || "https://www.odernixhomes.com"}`,
       icon: "🏠"
     }
   ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Award, Building2, Zap, Globe, CheckCircle, Search } from 'lucide-react';
+import { MapPin, Target, Eye, Heart, Shield, Lightbulb, Users, Award, Globe, CheckCircle } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const About = () => {
@@ -122,7 +122,7 @@ const About = () => {
 
   const businessAreas = [
     {
-      icon: <Building2 className="w-12 h-12" />,
+      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Engineering & Construction",
       subtitle: "Infrastructure Excellence",
       description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
@@ -130,7 +130,7 @@ const About = () => {
       stats: "Ready to Deliver Excellence"
     },
     {
-      icon: <Zap className="w-12 h-12" />,
+      image: "https://images.pexels.com/photos/421888/pexels-photo-421888.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Energy Solutions",
       subtitle: "Powering the Future",
       description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions.",
@@ -138,29 +138,37 @@ const About = () => {
       stats: "Sustainable Power Solutions"
     },
     {
-      icon: <Globe className="w-12 h-12" />,
+      image: "https://images.pexels.com/photos/162568/oil-rig-sea-oil-drilling-162568.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Oil & Gas Services",
       subtitle: "Upstream & Downstream Excellence",
-      description: "Comprehensive drilling, exploration, pipeline construction, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",
-      services: ["Drilling & Exploration", "Pipeline Construction", "Offshore Support", "FPSO Operations", "Environmental Services"],
+      description: "Comprehensive pipeline construction, facility development, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",
+      services: ["Pipeline Construction", "Facility Development", "Offshore Support", "FPSO Operations", "Environmental Services"],
       stats: "Advanced Technology Ready"
     },
     {
-      icon: <Users className="w-12 h-12" />,
+      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      title: "Drilling Services",
+      subtitle: "Advanced Well Operations",
+      description: "Specialized drilling division offering complete well lifecycle management with cutting-edge technology, real-time monitoring, and comprehensive safety protocols for onshore and offshore operations.",
+      services: ["Rotary & Directional Drilling", "Well Completion & Workover", "Drilling Auxiliary Services", "Real-time Monitoring", "Well Intervention"],
+      stats: "Advanced Drilling Technology"
+    },
+    {
+      image: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Supply & Procurement",
       subtitle: "Integrated Logistics Solutions",
       description: "Medical supplies, office equipment, oilfield materials, and comprehensive logistics solutions. Serving healthcare, corporate, and industrial sectors with reliable supply chains.",
       services: ["Medical Supplies", "Office Equipment", "Oilfield Materials", "Logistics Solutions", "Supply Chain Management"],
       stats: "Global Supply Network"
     },
-   /*  {
-      icon: <Search className="w-12 h-12" />,
-      title: " (Non-Destructive Testing)",
-      subtitle: "Quality Assurance Excellence",
-      description: "ASNT certified specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
+    {
+      image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      title: "NDT (Non-Destructive Testing)",
+      subtitle: "ISO-Certified Quality Assurance",
+      description: "ISO-certified ASNT specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
       services: ["Ultrasonic Testing", "Radiographic Testing", "Magnetic Particle Testing", "Pipeline Integrity Assessment", "Weld Quality Assessment"],
-      stats: "ASNT Level II/III Certified"
-    } */
+      stats: "ISO-Certified ASNT Level II/III"
+    },
   ];
 
 
@@ -184,12 +192,17 @@ const About = () => {
       title: "Real Estate Development",
       description: "Through Odernix Homes, we deliver luxury residential projects with modern amenities, sustainable design, and smart home integration.",
       features: ["Luxury Residences", "Smart Home Tech", "Sustainable Design", "Community Planning"]
-    }
- /*    {
+    },
+    {
       title: "NDT & Quality Assurance",
-      description: "Comprehensive non-destructive testing services with ASNT certified technicians ensuring safety, compliance, and structural integrity across all industrial applications.",
+      description: "Comprehensive non-destructive testing services with ISO-certified ASNT technicians ensuring safety, compliance, and structural integrity across all industrial applications.",
       features: ["Ultrasonic Testing", "Radiographic Testing", "Pipeline Integrity", "Weld Assessment"]
-    } */
+    },
+    {
+      title: "Drilling & Well Services",
+      description: "Advanced drilling operations with state-of-the-art equipment, real-time monitoring systems, and comprehensive safety protocols for optimal well performance.",
+      features: ["Directional Drilling", "Well Completion", "Real-time Monitoring", "Safety Protocols"]
+    }
   ];
 
   return (
@@ -284,8 +297,12 @@ const About = () => {
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-purple-500 to-teal-500 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 <div className="flex items-start space-x-6 mb-6">
-                  <div className="text-purple-600 bg-purple-100 p-4 rounded-2xl group-hover:bg-purple-200 transition-colors duration-300">
-                    {area.icon}
+                  <div className="bg-purple-100 p-2 rounded-2xl group-hover:bg-purple-200 transition-colors duration-300 overflow-hidden">
+                    <img 
+                      src={area.image} 
+                      alt={area.title}
+                      className="w-16 h-16 rounded-xl object-cover"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors duration-300">
@@ -668,7 +685,7 @@ const About = () => {
           </div>
 
           {/* Policy Commitment Statement */}
-          <div className="mt-16 text-center">
+         {/*  <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-purple-600 to-teal-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Our Policy Commitment</h3>
               <p className="text-lg text-purple-100 max-w-4xl mx-auto">
@@ -677,7 +694,7 @@ const About = () => {
                 and accountable for upholding these standards in their daily work.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
