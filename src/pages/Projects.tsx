@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, MapPin, Users, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Projects = () => {
@@ -158,10 +158,10 @@ const Projects = () => {
   });
 
   const stats = [
-    { icon: <Award className="w-8 h-8" />, value: "8", label: "Service Areas" },
-    { icon: <Users className="w-8 h-8" />, value: "13+", label: "Certifications" },
-    { icon: <TrendingUp className="w-8 h-8" />, value: "5", label: "Countries" },
-    { icon: <Calendar className="w-8 h-8" />, value: "9", label: "Years Experience" }
+    { image: "https://images.pexels.com/photos/351961/pexels-photo-351961.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop", value: "8", label: "Service Areas" },
+    { image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop", value: "13+", label: "Certifications" },
+    { image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop", value: "5", label: "Countries" },
+    { image: "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop", value: "9", label: "Years Experience" }
   ];
 
   return (
@@ -215,8 +215,12 @@ const Projects = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 md:w-16 md:h-16 bg-purple-100 rounded-full mb-4 text-purple-600">
-                  {stat.icon}
+                <div className="inline-flex items-center justify-center w-20 h-20 md:w-16 md:h-16 bg-purple-100 rounded-full mb-4 p-2 overflow-hidden">
+                  <img 
+                    src={stat.image} 
+                    alt={stat.label}
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
                 <div className="text-4xl md:text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600 text-base md:text-sm">{stat.label}</div>

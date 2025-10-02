@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, CheckCircle, Award, Lightbulb, Leaf, Heart, ExternalLink } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, ExternalLink } from 'lucide-react';
 import LazyImage from '../components/LazyImage';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
@@ -123,11 +123,11 @@ const Home = () => {
   ];
 
   const whyChooseUs = [
-    { icon: <CheckCircle className="w-6 h-6" />, title: "Industry Expertise", description: "Expert team ready to deliver world-class engineering solutions" },
-    { icon: <Award className="w-6 h-6" />, title: "Global Certifications", description: "ISO 9001:2015 and multiple international standards compliance" },
-    { icon: <Lightbulb className="w-6 h-6" />, title: "Innovation Hub", description: "Cutting-edge technology and digital solutions" },
-    { icon: <Leaf className="w-6 h-6" />, title: "Sustainability Leader", description: "Committed to environmental responsibility and green practices" },
-    { icon: <Heart className="w-6 h-6" />, title: "Client-Centric Approach", description: "Dedicated to exceeding expectations with personalized service" }
+    { image: "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", title: "Industry Expertise", description: "Expert team ready to deliver world-class engineering solutions" },
+    { image: "https://images.pexels.com/photos/351961/pexels-photo-351961.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", title: "Global Certifications", description: "ISO 9001:2015 and multiple international standards compliance" },
+    { image: "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", title: "Innovation Hub", description: "Cutting-edge technology and digital solutions" },
+    { image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", title: "Sustainability Leader", description: "Committed to environmental responsibility and green practices" },
+    { image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", title: "Client-Centric Approach", description: "Dedicated to exceeding expectations with personalized service" }
   ];
 
 
@@ -475,10 +475,14 @@ const Home = () => {
                 }`}
                 style={{ transitionDelay: `${(index + 1) * 100}ms` }}
               >
-                <div className="inline-flex items-center justify-center w-24 h-24 md:w-20 md:h-20 bg-white/20 rounded-full mb-6 text-white group-hover:bg-white/40 group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-500 relative overflow-hidden">
+                <div className="inline-flex items-center justify-center w-24 h-24 md:w-20 md:h-20 bg-white/20 rounded-full mb-6 group-hover:bg-white/40 group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-500 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-pink-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                    {item.icon}
+                  <div className="relative group-hover:scale-125 transition-all duration-500 w-12 h-12 md:w-10 md:h-10">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full rounded-full object-cover"
+                    />
                   </div>
                 </div>
                 <h3 className="text-2xl md:text-xl font-semibold mb-4 group-hover:text-yellow-300 transition-all duration-300 group-hover:scale-105">{item.title}</h3>

@@ -130,7 +130,7 @@ const About = () => {
       stats: "Ready to Deliver Excellence"
     },
     {
-      image: "https://images.pexels.com/photos/421888/pexels-photo-421888.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Energy Solutions",
       subtitle: "Powering the Future",
       description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions.",
@@ -138,7 +138,7 @@ const About = () => {
       stats: "Sustainable Power Solutions"
     },
     {
-      image: "https://images.pexels.com/photos/162568/oil-rig-sea-oil-drilling-162568.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "https://images.pexels.com/photos/128867/pexels-photo-128867.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
       title: "Oil & Gas Services",
       subtitle: "Upstream & Downstream Excellence",
       description: "Comprehensive pipeline construction, facility development, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",

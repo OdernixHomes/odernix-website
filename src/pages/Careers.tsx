@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Award, Heart, Lightbulb, Globe, ArrowRight, ExternalLink } from 'lucide-react';
+import { MapPin, Clock, ArrowRight, ExternalLink } from 'lucide-react';
 
 const Careers = () => {
   const openings = [
@@ -128,32 +128,32 @@ const Careers = () => {
 
   const benefits = [
     {
-      icon: <Award className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/351961/pexels-photo-351961.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Competitive Compensation",
       description: "Industry-leading salaries with performance-based bonuses and comprehensive benefits packages."
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Global Training Opportunities",
       description: "Access to international training programs, certifications, and professional development across our global offices."
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Career Growth",
       description: "Clear career progression paths with mentorship programs and leadership development opportunities."
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Health & Wellness",
       description: "Comprehensive health insurance, wellness programs, and work-life balance initiatives."
     },
     {
-      icon: <Lightbulb className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Innovation Culture",
       description: "Work on cutting-edge projects with access to latest technologies and innovation labs."
     },
     {
-      icon: <MapPin className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/3182796/pexels-photo-3182796.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop",
       title: "Global Mobility",
       description: "Opportunities to work across our offices in Nigeria, UK, and Canada with relocation support."
     }
@@ -214,8 +214,12 @@ const Careers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-6 text-purple-600">
-                  {benefit.icon}
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-6 p-2 overflow-hidden">
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title}
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
