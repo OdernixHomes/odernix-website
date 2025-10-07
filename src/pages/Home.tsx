@@ -106,6 +106,11 @@ const Home = () => {
       icon: "⛽"
     },
     {
+      title: "Waste Management & Solid Control",
+      description: "Environmentally compliant waste management solutions for drilling operations and industrial facilities.",
+      icon: "♻️"
+    },
+    {
       title: "NDT (Non-Destructive Testing)",
       description: "ISO-certified testing services ensuring structural integrity and safety compliance across all industries.",
       icon: "🔍"

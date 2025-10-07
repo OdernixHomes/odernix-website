@@ -292,10 +292,7 @@ const Careers = () => {
                         <Clock className="w-4 h-4" />
                         <span>{job.type}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <Users className="w-4 h-4" />
-                        <span>{job.experience}</span>
-                      </div>
+                   
                     </div>
                     <p className="text-gray-600 mb-6">{job.description}</p>
                     <div>

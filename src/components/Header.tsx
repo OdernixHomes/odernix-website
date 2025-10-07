@@ -80,6 +80,7 @@ const Header = () => {
     { name: 'Energy Solutions', path: '/services#energy' },
     { name: 'Oil & Gas Services', path: '/services#oil-gas' },
     { name: 'Drilling Services', path: '/services#drilling' },
+    { name: 'Waste Management & Solid Control', path: '/services#waste-management' },
     { name: 'Non-Destructive Testing (NDT)', path: '/services#ndt' },
     { name: 'General Services & Supplies', path: '/services#supplies' },
     { name: 'Real Estate Development', path: '/services#real-estate' }

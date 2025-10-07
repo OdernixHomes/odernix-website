@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle, Drill, TestTube } from 'lucide-react';
+import { ArrowRight, ExternalLink, Building, Zap, Droplets, Package, Home, CheckCircle, Drill, TestTube, Recycle } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Services = () => {
@@ -21,9 +21,10 @@ const Services = () => {
         "Mechanical & electrical engineering (turbines, layouts, solar with IoT sensors)",
         "Offshore/inshore haulage, escort security, pipeline protection",
         "Procurement services (oilfield materials, energy tools with supply chain analytics)",
-        "General contracts (facility upgrades, pipeline welding, transportation)"
+        "General contracts (facility upgrades, pipeline welding, transportation)",
+        "Quality assurance with ISO-certified NDT inspection services for all structural components"
       ],
-      feature: "Infrastructure development in complex projects inclusive of offshore platforms, bridges, roads,railway and urban development"
+      feature: "Infrastructure development in complex projects inclusive of offshore platforms, bridges, roads,railway and urban development with ISO-certified quality control"
     },
     {
       id: 1,
@@ -44,8 +45,9 @@ const Services = () => {
         "Smart grid design",
         "Digital platforms (billing software, trading dashboards, apps)",
         "Energy audits and efficiency consulting",
+        "Power plant equipment inspection with ISO-certified NDT services (turbines, boilers, pressure vessels)"
       ],
-      feature: "Energy audits and carbon footprint reports"
+      feature: "Energy audits and carbon footprint reports with ISO-certified quality assurance"
     },
     {
       id: 2,
@@ -65,9 +67,11 @@ const Services = () => {
         "Gas station management & retail fuel operations",
         "Upstream/downstream operations integration",
         "Process engineering and optimization",
-        "Facility maintenance and turnaround services"
+        "Facility maintenance and turnaround services",
+        "Pipeline integrity assessment with ASNT-certified NDT inspection (UT, RT, MT, PT)",
+        "Storage tank inspection & corrosion monitoring with ISO-certified technicians"
       ],
-      feature: "Comprehensive oil & gas value chain services with digital monitoring and environmental compliance"
+      feature: "Comprehensive oil & gas value chain services with digital monitoring, environmental compliance, and ASNT-certified NDT quality assurance"
     },
     {
       id: 3,
@@ -75,23 +79,46 @@ const Services = () => {
       icon: <Drill className="w-8 h-8" />,
       description: "Our specialized drilling division offers complete well lifecycle management with cutting-edge technology, advanced drilling capabilities, and comprehensive safety protocols for onshore and offshore operations.",
       subServices: [
-        "Advanced Drilling Services - Rotary drilling, directional drilling, horizontal drilling with real-time MWD/LWD systems",
-        "Well Completion & Workover - Casing running, cementing operations, perforation services with hydraulic fracturing support",
-        "Drilling Auxiliary Services - Mud logging, well logging, drilling fluid management, and cementing quality control",
-        "Drilling Equipment Supply - Drill bits, drilling fluids, casing, tubing, and specialized downhole tools",
-        "Well Intervention Services - Coiled tubing operations, wireline services, well stimulation, and production optimization",
-        "Drilling Engineering & Planning - Well design, trajectory planning, drilling program development with risk assessment",
-        "Offshore Drilling Support - Platform drilling, subsea operations, marine logistics coordination",
+        "Well completion - Installiation of well casting, tubing and completion accessories",
+        "Cementing - Cementing of casing and liners, remedial cementing, squeeze cementing",
+        "Perforation Services - Perforation walls to allow flow of oil and gas into the wellbore",
+        "Wall testing - Testing the integrity of the wellbore, and to evaluate reservoir performance",
+        "Completion Optimization - Optimizing completion designs for maximum production",
+        "Drilling Waste Management - Cuttings treatment, fluid recycling, environmental compliance",
         "Drilling Safety & HSE - Blowout prevention, well control training, emergency response procedures",
         "Real-time Drilling Monitoring - Advanced telemetry, downhole sensors, automated drilling systems",
         "Drilling Performance Optimization - Rate of penetration enhancement, drilling efficiency analysis",
         "Wellbore Quality Assurance - Trajectory control, formation evaluation, completion readiness",
-        "Drilling Waste Management - Cuttings treatment, fluid recycling, environmental compliance"
+        "Casing & tubing inspection with ASNT-certified NDT technicians (UT thickness measurement, weld inspection)",
+        "Rig equipment inspection with ISO 9712 certified NDT services for safety compliance"
       ],
-      feature: "Advanced drilling capabilities with real-time monitoring, digital twins, and comprehensive auxiliary services for complete well lifecycle management"
+      feature: "Advanced drilling capabilities with real-time monitoring, digital twins, ASNT-certified NDT quality control, and comprehensive auxiliary services for complete well lifecycle management"
     },
     {
       id: 4,
+      title: "Waste Management & Solid Control Services",
+      icon: <Recycle className="w-8 h-8" />,
+      description: "Our comprehensive waste management and solid control division provides environmentally compliant solutions for drilling operations, industrial facilities, and construction projects, ensuring safe handling, treatment, and disposal of all waste streams.",
+      subServices: [
+        "Drilling Waste Management - Drill cuttings treatment, disposal, and recycling solutions",
+        "Solid Control Systems - Shale shakers, mud cleaners, centrifuges, and desilters for drilling operations",
+        "Mud Engineering - Drilling fluid design, optimization, and real-time monitoring",
+        "Waste Treatment Technologies - Physical, chemical, and biological treatment processes",
+        "Environmental Compliance - Regulatory adherence, waste characterization, and reporting",
+        "Hazardous Waste Management - Safe handling, storage, and disposal of hazardous materials",
+        "Oil-Based Mud (OBM) Recovery - Thermal desorption and solvent extraction technologies",
+        "Water-Based Mud (WBM) Treatment - Solidification, stabilization, and beneficial reuse",
+        "Industrial Waste Disposal - Treatment and disposal of industrial and oilfield waste",
+        "Waste Minimization Programs - Reduction strategies and circular economy solutions",
+        "On-site Waste Treatment Facilities - Mobile and fixed treatment units for remote locations",
+        "Waste Audits & Consulting - Comprehensive waste stream analysis and optimization",
+        "Sludge Management - Tank cleaning, sludge treatment, and disposal services",
+        "Environmental Remediation - Contaminated soil treatment and site restoration"
+      ],
+      feature: "Zero-waste solutions with advanced solid control technology and environmental compliance for sustainable operations"
+    },
+    {
+      id: 5,
       title: "Non-Destructive Testing (NDT)",
       icon: <TestTube className="w-8 h-8" />,
       description: "Our ISO-certified NDT specialists provide comprehensive non-destructive testing services to ensure structural integrity, safety compliance, and quality assurance across oil & gas, construction, and marine industries without damaging tested materials.",
@@ -115,7 +142,7 @@ const Services = () => {
       feature: "ISO-certified ASNT Level II/III technicians with digital reporting, 3D flaw mapping, and comprehensive industry compliance"
     },
     {
-      id: 5,
+      id: 6,
       title: "General Services & Supplies",
       icon: <Package className="w-8 h-8" />,
       description: "Our supply division ensures timely delivery of medical, office, oilfield, and agricultural materials, optimized through advanced logistics and procurement strategies.",
@@ -134,7 +161,7 @@ const Services = () => {
       feature: "Global supply network with procurement and distribution capabilities"
     },
     {
-      id: 6,
+      id: 7,
       title: "Real Estate Development",
       icon: <Home className="w-8 h-8" />,
       description: "Through Odernix Homes, we design and build luxury residential properties with modern amenities and virtual tour options. Visit https://www.odernixhomes.com to explore.",
@@ -323,7 +350,7 @@ const Services = () => {
                   <h3 className="text-lg font-semibold text-teal-800 mb-2">Special Feature</h3>
                   <p className="text-teal-700">{services[activeTab].feature}</p>
                 </div>
-                {activeTab === 6 && (
+                {activeTab === 7 && (
                   <a
                     href="https://www.odernixhomes.com"
                     target="_blank"
@@ -468,7 +495,7 @@ const Services = () => {
       )}
 
       {/* NDT Services Detailed Section */}
-      {activeTab === 4 && (
+      {activeTab === 5 && (
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

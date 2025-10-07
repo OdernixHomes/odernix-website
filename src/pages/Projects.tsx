@@ -32,7 +32,6 @@ const Projects = () => {
       type: "Nigerian",
       projectSign: "Bastion Phase - Smart Living"
     },
-    // Nigerian Construction Projects
     /* {
       title: " Infrastructure Development",
       year: "2023",
@@ -72,7 +71,7 @@ const Projects = () => {
       year: "Case Study",
       category: "Energy",
       location: "London, United Kingdom",
-      description: "Comprehensive case study for renewable energy infrastructure development with British engineering standards, featuring smart grid technology integration capabilities.",
+      description: "Comprehensive case study for renewable energy infrastructure development with British engineering standards, featuring smart grid technology integration capabilities. Study includes ISO-certified NDT protocols for power plant equipment inspection and quality assurance.",
       image: "../energy/energy1.jpg",
       status: "Case Study",
       type: "International",
@@ -83,7 +82,7 @@ const Projects = () => {
       year: "Case Study",
       category: "Energy",
       location: "British Columbia, Canada",
-      description: "Detailed analysis and capability study for advanced energy storage systems and grid modernization techniques following Canadian engineering standards.",
+      description: "Detailed analysis and capability study for advanced energy storage systems and grid modernization techniques following Canadian engineering standards. Includes comprehensive NDT inspection requirements for critical infrastructure components.",
       image: "../energy/energy2.jpg",
       status: "Case Study",
       type: "International",
@@ -95,7 +94,7 @@ const Projects = () => {
       year: "Ready",
       category: "Marine Engineering",
       location: "Niger Delta, Nigeria",
-      description: "Specialized marine engineering services for offshore platforms, dredging operations, and coastal protection in the Niger Delta region.",
+      description: "Specialized marine engineering services for offshore platforms, dredging operations, and coastal protection in the Niger Delta region. All marine structures undergo comprehensive ISO-certified NDT inspection for safety compliance.",
       image: "../marine/marine.jpg",
       status: "Available",
       type: "Nigerian",
@@ -106,7 +105,7 @@ const Projects = () => {
       year: "Ready",
       category: "Oil & Gas",
       location: "Nigeria & West Africa",
-      description: "Comprehensive pipeline construction, facility development, FPSO operations, and offshore logistics services with certified expertise for Nigerian oil sector.",
+      description: "Comprehensive pipeline construction, facility development, FPSO operations, and offshore logistics services with certified expertise for Nigerian oil sector. Pipeline integrity assessment performed by ASNT-certified NDT specialists (API 570, API 510, API 653).",
       image: "../oil-gas/oil-and-gas-background2.jpg",
       status: "Available",
       type: "Nigerian",
@@ -117,11 +116,22 @@ const Projects = () => {
       year: "Ready",
       category: "Drilling Services",
       location: "Nigeria & West Africa",
-      description: "Specialized drilling services including rotary drilling, directional drilling, well completion, and real-time monitoring with cutting-edge technology and safety protocols.",
+      description: "Specialized drilling services including rotary drilling, directional drilling, well completion, and real-time monitoring with cutting-edge technology and safety protocols. All casing, tubing, and rig equipment undergo ISO 9712 certified NDT inspection for wellbore integrity and safety compliance.",
       image: "../drilling/drilling2.jpg",
       status: "Available",
       type: "Nigerian",
       projectSign: "Advanced Drilling Services - Odernix Drilling Division"
+    },
+    {
+      title: "Waste Management & Solid Control Services",
+      year: "Ready",
+      category: "Waste Management",
+      location: "Nigeria & West Africa",
+      description: "Comprehensive waste management and solid control services for drilling operations, industrial facilities, and construction projects. Advanced treatment technologies including drill cuttings treatment, solid control systems, mud engineering, and environmental compliance solutions with zero-waste strategies.",
+      image: "../waste-management/Remediation-of-crude-oil-impacted-site2.png",
+      status: "Available",
+      type: "Nigerian",
+      projectSign: "Environmental Solutions - Odernix Waste Management Division"
     },
     {
       title: "ISO-Certified NDT Inspection Services",
@@ -503,61 +513,132 @@ const Projects = () => {
         </div> 
       </section>*/}
 
-      {/* Project Highlights */}
-      <section className="py-20 bg-white relative bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/background.jpg")' }}
-      >
-        <div className="absolute inset-0 bg-white/70"></div>
-        <div className="relative z-10">
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Work Gallery Section - Sample Pictures */}
+      <section className="py-20 relative bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("/background.jpg")' }}>
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Project Highlights
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Work Gallery
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Key achievements and innovations across our project portfolio
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Sample showcase of our engineering and environmental capabilities across construction, marine works, and waste management services
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="text-center p-8 md:p-10 bg-purple-50 rounded-lg">
-              <div className="text-5xl md:text-4xl font-bold text-purple-600 mb-4">10+</div>
-              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Projects Delivered</div>
-              <p className="text-gray-600 text-base">Successfully completed projects across multiple sectors and countries</p>
-            </div>
-            <div className="text-center p-8 md:p-10 bg-teal-50 rounded-lg">
-              <div className="text-5xl md:text-4xl font-bold text-teal-600 mb-4">98%</div>
-              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Client Satisfaction</div>
-              <p className="text-gray-600 text-base">Consistently high client satisfaction rates across all project types</p>
-            </div>
-            <div className="text-center p-8 md:p-10 bg-gold-50 rounded-lg">
-              <div className="text-5xl md:text-4xl font-bold text-yellow-600 mb-4">VR</div>
-              <div className="text-xl md:text-lg font-semibold text-gray-900 mb-4">Virtual Tour Technology</div>
-              <p className="text-gray-600 text-base">Cutting-edge visualization technology for project planning and client engagement</p>
+
+          {/* Construction & Marine Engineering Samples */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Construction & Marine Engineering
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/FABRICATED-SKIM-PILE-CAP-AND-CONNECTING-PIPES.png" alt="Marine Engineering" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Marine Engineering - Skim Pile Cap</h4>
+                  <p className="text-gray-600 text-base">Specialized fabrication and installation of skim pile caps with precision connecting pipes</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/1FABRICATEDSKIM-PILE-CAP-AND-CONNECTING-PIPES2.png" alt="Skim Pile Installation" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Skim Pile Installation</h4>
+                  <p className="text-gray-600 text-base">Advanced connecting pipe systems for complex marine engineering projects</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/PLATFORM-UPGRADE-FOR-SIR-RICHES.png" alt="Platform Infrastructure" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Platform Infrastructure</h4>
+                  <p className="text-gray-600 text-base">Platform upgrade and structural enhancement with international safety standards</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/STRUCTURAL-BASE-CONSTRUCTION .png" alt="Foundation Engineering" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Marine Engineering</h4>
+                  <p className="text-gray-600 text-base">Heavy-duty stell base with advanced marine techniques</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/WELDING-OPERATION .png" alt="Welding & Fabrication" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Welding & Fabrication</h4>
+                  <p className="text-gray-600 text-base">Specialized welding operations with ISO-certified NDT inspection</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/marine-works.jpg" alt="Marine Works" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Marine Works</h4>
+                  <p className="text-gray-600 text-base">Coastal protection and offshore support infrastructure</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./case-in-case/saftey.jpg" alt="Safety Management" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Safety Management</h4>
+                  <p className="text-gray-600 text-base">HSE protocols implementation across all project sites</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/contact"
-              className="inline-flex items-center space-x-2 bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200"
-            >
-              <span>View Detailed Reports</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+
+          {/* Waste Management & Environmental Services */}
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Waste Management & Environmental Services
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./waste-management/Remediation-of-crude-oil-impacted-site2.png" alt="Environmental Remediation" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Environmental Remediation</h4>
+                  <p className="text-gray-600 text-base">Crude oil impacted site remediation with bioremediation techniques</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./waste-management/Re–vegetation-of-remediated-crude-oil-impacted-site2.png" alt="Ecological Restoration" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Ecological Restoration</h4>
+                  <p className="text-gray-600 text-base">Re-vegetation and biodiversity recovery of remediated sites</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./waste-management/In–situ-water-quality-measurement.png" alt="Water Quality Monitoring" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Water Quality Monitoring</h4>
+                  <p className="text-gray-600 text-base">Real-time in-situ water quality assessment for environmental compliance</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./waste-management/Fumigation-of-company-premises.png" alt="Industrial Fumigation" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Industrial Fumigation</h4>
+                  <p className="text-gray-600 text-base">Professional fumigation services for industrial facilities</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
+                <img src="./waste-management/Fumigation-of-company premises2.png" alt="Fumigation Services" className="w-full h-96 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Fumigation Services</h4>
+                  <p className="text-gray-600 text-base">Comprehensive hygiene management for oil & gas installations</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div> */}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Project?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Whether you need engineering solutions or want to build your dream home, 
             let's collaborate to bring your vision to life.
           </p>
+          </h2>
           <Link
             to="/contact"
             className="inline-flex items-center space-x-2 bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
@@ -566,7 +647,7 @@ const Projects = () => {
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -152,7 +152,7 @@ const Contact = () => {
       address: "No 12 Agip Road, Mile 4 Rumueme, Port Harcourt, Rivers State, Nigeria | Additional Address: Royal Plaza, Port Harcourt, Rivers State, Nigeria",
       phone: "+234(0) 9128 999 972",
       email: "ph@odernix.com",
-      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       type: "Regional Office",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination with multiple operational addresses.",
       color: "from-teal-500 to-teal-600"
@@ -317,6 +317,18 @@ const Contact = () => {
                   </div>
                 </a>
               ))}
+            </div>
+            <div className="flex justify-center pt-6">
+              <a
+                href="/odernix nigeria limited profile-3.pdf"
+                download
+                className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/30"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download Company Brochure</span>
+              </a>
             </div>
           </div>
         </div>
@@ -719,20 +731,20 @@ const Contact = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section 
+      {/* <section 
         ref={ctaSection.elementRef}
         className="py-16 sm:py-20 lg:py-32 relative bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url("/background.jpg")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-blue-900/85 to-teal-900/90"></div>
-        
+         */}
         {/* Floating elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 sm:w-40 sm:h-40 bg-white/5 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full animate-bounce" style={{ animationDuration: '8s' }}></div>
-        </div>
+        </div> */}
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+       {/*  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transform transition-all duration-1000 ${
             ctaSection.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
@@ -761,8 +773,8 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
     </div>
   );
 };

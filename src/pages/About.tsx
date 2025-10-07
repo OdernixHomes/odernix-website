@@ -74,7 +74,7 @@ const About = () => {
       address: "A4, 29B N'Djamena Crescent, off Aminu Kano Crescent, Wuse II, Abuja, Nigeria",
       phone: "+234 9128 999 972",
       email: "info@odernix.com",
-      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       description: "Our flagship headquarters housing executive leadership, engineering teams, and project management divisions."
     },
     {
@@ -84,7 +84,7 @@ const About = () => {
       address: "Royal Plaza, Port Harcourt, Rivers State, Nigeria",
       phone: "+234 9128 999 972",
       email: "ph@odernix.com",
-      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       description: "Strategic location for oil & gas operations, marine services, and Niger Delta project coordination."
     },
     {
@@ -122,39 +122,47 @@ const About = () => {
 
   const businessAreas = [
     {
-      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "./case-in-case/STRUCTURAL-BASE-CONSTRUCTION .png",
       title: "Engineering & Construction",
       subtitle: "Infrastructure Excellence",
-      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development.",
-      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "Infrastructure Development", "Offshore Platforms"],
+      description: "Comprehensive foundation engineering, marine construction, civil works, and infrastructure development with ISO-certified quality assurance. We specialize in complex projects including offshore platforms, bridges, roads, and urban development with ASNT-certified NDT inspection.",
+      services: ["Foundation Engineering", "Marine Construction", "Civil Works", "Infrastructure Development", "Offshore Platforms", "ISO-Certified NDT Inspection"],
       stats: "Ready to Deliver Excellence"
     },
     {
-      image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "../energy/energy1.jpg",
       title: "Energy Solutions",
       subtitle: "Powering the Future",
-      description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions.",
-      services: ["Independent Power Projects", "Renewable Energy", "Smart Grid Systems", "Energy Storage", "Power Distribution"],
+      description: "Independent power projects, renewable energy systems, smart grid technologies, and energy infrastructure. Leading Nigeria's transition to sustainable energy solutions with ISO-certified equipment inspection and quality control.",
+      services: ["Independent Power Projects", "Renewable Energy", "Smart Grid Systems", "Energy Storage", "Power Distribution", "ISO-Certified Equipment Inspection"],
       stats: "Sustainable Power Solutions"
     },
     {
-      image: "https://images.pexels.com/photos/128867/pexels-photo-128867.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "../oil-gas/oil-and-gas-background.jpg",
       title: "Oil & Gas Services",
       subtitle: "Upstream & Downstream Excellence",
-      description: "Comprehensive pipeline construction, facility development, and offshore support operations. Serving major oil companies with cutting-edge technology and safety standards.",
-      services: ["Pipeline Construction", "Facility Development", "Offshore Support", "FPSO Operations", "Environmental Services"],
+      description: "Comprehensive pipeline construction, facility development, and offshore support operations. Serving major oil companies with cutting-edge technology, ASNT-certified NDT pipeline integrity assessment, and safety standards.",
+      services: ["Pipeline Construction", "Facility Development", "Offshore Support", "FPSO Operations", "Environmental Services", "ASNT-Certified Pipeline Inspection"],
       stats: "Advanced Technology Ready"
     },
     {
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "../drilling/drilling.jpeg",
       title: "Drilling Services",
       subtitle: "Advanced Well Operations",
-      description: "Specialized drilling division offering complete well lifecycle management with cutting-edge technology, real-time monitoring, and comprehensive safety protocols for onshore and offshore operations.",
-      services: ["Rotary & Directional Drilling", "Well Completion & Workover", "Drilling Auxiliary Services", "Real-time Monitoring", "Well Intervention"],
+      description: "Specialized drilling division offering complete well lifecycle management with cutting-edge technology, real-time monitoring, ISO 9712 certified NDT inspection, and comprehensive safety protocols for onshore and offshore operations.",
+      services: ["Rotary & Directional Drilling", "Well Completion & Workover", "Drilling Auxiliary Services", "Real-time Monitoring", "Well Intervention", "ISO 9712 NDT Inspection"],
       stats: "Advanced Drilling Technology"
     },
     {
-      image: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "./waste-management/Remediation of crude oil impacted site2.png",
+      title: "Waste Management & Solid Control",
+      subtitle: "Environmental Compliance Solutions",
+      description: "Comprehensive waste management and solid control services providing environmentally compliant solutions for drilling operations, industrial facilities, and construction projects with advanced treatment technologies.",
+      services: ["Drilling Waste Management", "Solid Control Systems", "Mud Engineering", "Environmental Compliance", "Waste Treatment Technologies"],
+      stats: "Zero-Waste Solutions Ready"
+    },
+    {
+      image: "../supply-chain/supply-chain-background.png",
       title: "Supply & Procurement",
       subtitle: "Integrated Logistics Solutions",
       description: "Medical supplies, office equipment, oilfield materials, and comprehensive logistics solutions. Serving healthcare, corporate, and industrial sectors with reliable supply chains.",
@@ -162,7 +170,7 @@ const About = () => {
       stats: "Global Supply Network"
     },
     {
-      image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
+      image: "../ndt/ndt.jpg",
       title: "NDT (Non-Destructive Testing)",
       subtitle: "ISO-Certified Quality Assurance",
       description: "ISO-certified ASNT specialists providing comprehensive non-destructive testing services ensuring structural integrity, safety compliance, and quality assurance across all industrial sectors.",
@@ -192,6 +200,11 @@ const About = () => {
       title: "Real Estate Development",
       description: "Through Odernix Homes, we deliver luxury residential projects with modern amenities, sustainable design, and smart home integration.",
       features: ["Luxury Residences", "Smart Home Tech", "Sustainable Design", "Community Planning"]
+    },
+    {
+      title: "Waste Management & Solid Control",
+      description: "Environmental compliance solutions for drilling waste, industrial waste treatment, and solid control systems with advanced treatment technologies and zero-waste strategies.",
+      features: ["Drilling Waste Management", "Solid Control Systems", "Environmental Compliance", "Treatment Technologies"]
     },
     {
       title: "NDT & Quality Assurance",
@@ -276,12 +289,24 @@ const About = () => {
               Who We Are
             </h2>
             <div className="w-24 sm:w-32 h-1 sm:h-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-600 mx-auto rounded-full mb-8 sm:mb-10"></div>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-6xl mx-auto leading-relaxed font-light">
-              Odernix Nigeria Limited is a leading multi-disciplinary engineering and construction company, 
-              providing innovative solutions across infrastructure, energy, oil & gas, and residential development. 
-              Through our subsidiary Odernix Homes, we deliver exceptional real estate projects that combine 
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-6xl mx-auto leading-relaxed font-light mb-8">
+              Odernix Nigeria Limited is a leading multi-disciplinary engineering and construction company,
+              providing innovative solutions across infrastructure, energy, oil & gas, and residential development.
+              Through our subsidiary Odernix Homes, we deliver exceptional real estate projects that combine
               modern design with sustainable practices, setting new standards in the industry.
             </p>
+            <div className="flex justify-center">
+              <a
+                href="/odernix nigeria limited profile-3.pdf"
+                download
+                className="inline-flex items-center space-x-3 bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download Company Brochure</span>
+              </a>
+            </div>
           </div>
 
           {/* Enhanced Business Areas Grid */}
